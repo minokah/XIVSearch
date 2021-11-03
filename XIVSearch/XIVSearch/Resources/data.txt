@@ -1,0 +1,682 @@
+{
+  "CategoryList": {
+    "1": {
+      "Name": "Pugilist's Arm",
+      "Emoji": "🥊"
+    },
+    "2": {
+      "Name": "Gladiator's Arm",
+      "Emoji": "🗡️"
+    },
+    "3": {
+      "Name": "Marauder's Arm",
+      "Emoji": "🪓"
+    },
+    "4": {
+      "Name": "Archer's Arm",
+      "Emoji": "🏹"
+    },
+    "5": {
+      "Name": "Lancer's Arm",
+      "Emoji": "🔱"
+    },
+    "6": {
+      "Name": "One-handed Thaumaturge's Arm",
+      "Emoji": ":magic_wand:"
+    },
+    "7": {
+      "Name": "Two-handed Thaumaturge's Arm",
+      "Emoji": "🦯"
+    },
+    "8": {
+      "Name": "One-handed Conjurer's Arm",
+      "Emoji": ":magic_wand:"
+    },
+    "9": {
+      "Name": "Two-handed Conjurer's Arm",
+      "Emoji": "🦯"
+    },
+    "10": {
+      "Name": "Arcanist's Grimoire",
+      "Emoji": "📕"
+    },
+    "12": {
+      "Name": "Carpenters's Primary Tool",
+      "Emoji": ":carpentry_saw:"
+    },
+    "13": {
+      "Name": "Carpenters's Secondary Tool",
+      "Emoji": "🔨"
+    },
+    "14": {
+      "Name": "Blacksmith's Primary Tool",
+      "Emoji": "🔨"
+    },
+    "15": {
+      "Name": "Blacksmith's Secondary Tool",
+      "Emoji": "🔧"
+    },
+    "16": {
+      "Name": "Armorer's Primary Tool",
+      "Emoji": "🔨"
+    },
+    "17": {
+      "Name": "Armorer's Secondary Tool",
+      "Emoji": "🔧"
+    },
+    "18": {
+      "Name": "Goldsmith's Primary Tool",
+      "Emoji": "🔨"
+    },
+    "19": {
+      "Name": "Goldsmith's Secondary Tool",
+      "Emoji": ":manual_wheelchair:"
+    },
+    "20": {
+      "Name": "Leatherworkers's Primary Tool",
+      "Emoji": "🔪"
+    },
+    "21": {
+      "Name": "Leatherworkers's Secondary Tool",
+      "Emoji": "🧹"
+    },
+    "22": {
+      "Name": "Weaver's Primary Tool",
+      "Emoji": ":sewing_needle:"
+    },
+    "23": {
+      "Name": "Weaver's Secondary Tool",
+      "Emoji": ":manual_wheelchair:"
+    },
+    "24": {
+      "Name": "Alchemist's Primary Tool",
+      "Emoji": "💡"
+    },
+    "25": {
+      "Name": "Alchemist's Secondary Tool",
+      "Emoji": "🏺"
+    },
+    "26": {
+      "Name": "Culinarian's Primary Tool",
+      "Emoji": "🍳"
+    },
+    "27": {
+      "Name": "Culinarian's Secondary Tool",
+      "Emoji": "🔪"
+    },
+    "28": {
+      "Name": "Miner's Primary Tool",
+      "Emoji": "⛏️"
+    },
+    "29": {
+      "Name": "Miner's Secondary Tool",
+      "Emoji": "🔨"
+    },
+    "30": {
+      "Name": "Botanist's Primary Tool",
+      "Emoji": "🪓"
+    },
+    "31": {
+      "Name": "Botanist's Secondary Tool",
+      "Emoji": "🪒"
+    },
+    "32": {
+      "Name": "Fisher's Primary Tool",
+      "Emoji": "🎣"
+    },
+    "33": {
+      "Name": "Fisher's Secondary Tool",
+      "Emoji": "🔱"
+    },
+    "34": {
+      "Name": "Head",
+      "Emoji": "👒"
+    },
+    "35": {
+      "Name": "Body",
+      "Emoji": "🧥"
+    },
+    "36": {
+      "Name": "Legs",
+      "Emoji": "👖"
+    },
+    "37": {
+      "Name": "Hands",
+      "Emoji": "🧤"
+    },
+    "38": {
+      "Name": "Feet",
+      "Emoji": "👟"
+    },
+    "39": {
+      "Name": "Waist",
+      "Emoji": "👖"
+    },
+    "43": {
+      "Name": "Ring",
+      "Emoji": "💍"
+    },
+    "44": {
+      "Emoji": "🧪"
+    },
+    "46": {
+      "Emoji": "🍔"
+    },
+    "48": {
+      "Emoji": ":rock:"
+    },
+    "49": {
+      "Emoji": "🔨"
+    },
+    "81": {
+      "Name": "Minion",
+      "Emoji": "🧸"
+    },
+    "84": {
+      "Name": "Rogue's Arm",
+      "Emoji": "🗡️"
+    },
+    "86": {
+      "Name": "Triple Triad Card",
+      "Emoji": "🃏"
+    },
+    "87": {
+      "Name": "Dark Knight's Arm",
+      "Emoji": "🗡️"
+    },
+    "88": {
+      "Name": "Machinist's Arm",
+      "Emoji": "🔫"
+    },
+    "89": {
+      "Name": "Astrologian's Arm",
+      "Emoji": "🔮"
+    },
+    "96": {
+      "Name": "Samurai's Arm",
+      "Emoji": "🗡️"
+    },
+    "97": {
+      "Name": "Red Mage's Arm",
+      "Emoji": "🦯"
+    },
+    "98": {
+      "Name": "Scholar's Arm",
+      "Emoji": "📗"
+    },
+    "105": {
+      "Name": "Blue Mage's Arm",
+      "Emoji": "🦯"
+    },
+    "106": {
+      "Name": "Gunbreaker's Arm",
+      "Emoji": "🗡️"
+    },
+    "107": {
+      "Name": "Dancer's Arm",
+      "Emoji": "📀"
+    }
+  },
+  "JobList": {
+    "1": {
+      "Type": "tank",
+      "Long": "Gladiator",
+      "Short": "GLA",
+      "Icon": "https://img.finalfantasyxiv.com/lds/h/U/F5JzG9RPIKFSogtaKNBk455aYA.png"
+    },
+    "2": {
+      "Type": "dps",
+      "Long": "Pugilist",
+      "Short": "PGL",
+      "Icon": "https://img.finalfantasyxiv.com/lds/h/V/iW7IBKQ7oglB9jmbn6LwdZXkWw.png"
+    },
+    "3": {
+      "Type": "tank",
+      "Long": "Marauder",
+      "Short": "MRD",
+      "Icon": "https://img.finalfantasyxiv.com/lds/h/N/St9rjDJB3xNKGYg-vwooZ4j6CM.png"
+    },
+    "4": {
+      "Type": "dps",
+      "Long": "Lancer",
+      "Short": "LNC",
+      "Icon": "https://img.finalfantasyxiv.com/lds/h/k/tYTpoSwFLuGYGDJMff8GEFuDQs.png"
+    },
+    "5": {
+      "Type": "dps",
+      "Long": "Archer",
+      "Short": "ARC",
+      "Icon": "https://img.finalfantasyxiv.com/lds/h/Q/ZpqEJWYHj9SvHGuV9cIyRNnIkk.png"
+    },
+    "6": {
+      "Type": "healer",
+      "Long": "Conjurer",
+      "Short": "CNJ",
+      "Icon": "https://img.finalfantasyxiv.com/lds/h/s/gl62VOTBJrm7D_BmAZITngUEM8.png"
+    },
+    "7": {
+      "Type": "dps",
+      "Long": "Thaumaturge",
+      "Short": "THM",
+      "Icon": "https://img.finalfantasyxiv.com/lds/h/4/IM3PoP6p06GqEyReygdhZNh7fU.png"
+    },
+    "8": {
+      "Type": "crafter",
+      "Long": "Carpenter",
+      "Short": "CRP",
+      "Icon": "https://img.finalfantasyxiv.com/lds/h/v/YCN6F-xiXf03Ts3pXoBihh2OBk.png"
+    },
+    "9": {
+      "Type": "crafter",
+      "Long": "Blacksmith",
+      "Short": "BSM",
+      "Icon": "https://img.finalfantasyxiv.com/lds/h/5/EEHVV5cIPkOZ6v5ALaoN5XSVRU.png"
+    },
+    "10": {
+      "Type": "crafter",
+      "Long": "Armorer",
+      "Short": "ARM",
+      "Icon": "https://img.finalfantasyxiv.com/lds/h/G/Rq5wcK3IPEaAB8N-T9l6tBPxCY.png"
+    },
+    "11": {
+      "Type": "crafter",
+      "Long": "Goldsmith",
+      "Short": "GSM",
+      "Icon": "https://img.finalfantasyxiv.com/lds/h/L/LbEjgw0cwO_2gQSmhta9z03pjM.png"
+    },
+    "12": {
+      "Type": "crafter",
+      "Long": "Leatherworker",
+      "Short": "LTW",
+      "Icon": "https://img.finalfantasyxiv.com/lds/h/b/ACAcQe3hWFxbWRVPqxKj_MzDiY.png"
+    },
+    "13": {
+      "Type": "crafter",
+      "Long": "Weaver",
+      "Short": "WVR",
+      "Icon": "https://img.finalfantasyxiv.com/lds/h/X/E69jrsOMGFvFpCX87F5wqgT_Vo.png"
+    },
+    "14": {
+      "Type": "crafter",
+      "Long": "Alchemist",
+      "Short": "ALC",
+      "Icon": "https://img.finalfantasyxiv.com/lds/h/C/bBVQ9IFeXqjEdpuIxmKvSkqalE.png"
+    },
+    "15": {
+      "Type": "crafter",
+      "Long": "Culinarian",
+      "Short": "CUL",
+      "Icon": "https://img.finalfantasyxiv.com/lds/h/m/1kMI2v_KEVgo30RFvdFCyySkFo.png"
+    },
+    "16": {
+      "Type": "gatherer",
+      "Long": "Miner",
+      "Short": "MIN",
+      "Icon": "https://img.finalfantasyxiv.com/lds/h/A/aM2Dd6Vo4HW_UGasK7tLuZ6fu4.png"
+    },
+    "17": {
+      "Type": "gatherer",
+      "Long": "Botanist",
+      "Short": "BTN",
+      "Icon": "https://img.finalfantasyxiv.com/lds/h/I/jGRnjIlwWridqM-mIPNew6bhHM.png"
+    },
+    "18": {
+      "Type": "gatherer",
+      "Long": "Fisher",
+      "Short": "FSH",
+      "Icon": "https://img.finalfantasyxiv.com/lds/h/x/B4Azydbn7Prubxt7OL9p1LZXZ0.png"
+    },
+    "19": {
+      "Type": "tank",
+      "Long": "Paladin",
+      "Short": "PLD",
+      "Icon": "https://img.finalfantasyxiv.com/lds/h/E/d0Tx-vhnsMYfYpGe9MvslemEfg.png"
+    },
+    "20": {
+      "Type": "dps",
+      "Long": "Monk",
+      "Short": "MNK",
+      "Icon": "https://img.finalfantasyxiv.com/lds/h/K/HW6tKOg4SOJbL8Z20GnsAWNjjM.png"
+    },
+    "21": {
+      "Type": "tank",
+      "Long": "Warrior",
+      "Short": "WAR",
+      "Icon": "https://img.finalfantasyxiv.com/lds/h/y/A3UhbjZvDeN3tf_6nJ85VP0RY0.png"
+    },
+    "22": {
+      "Type": "dps",
+      "Long": "Dragoon",
+      "Short": "DRG",
+      "Icon": "https://img.finalfantasyxiv.com/lds/h/m/gX4OgBIHw68UcMU79P7LYCpldA.png"
+    },
+    "23": {
+      "Type": "dps",
+      "Long": "Bard",
+      "Short": "BRD",
+      "Icon": "https://img.finalfantasyxiv.com/lds/h/F/KWI-9P3RX_Ojjn_mwCS2N0-3TI.png"
+    },
+    "24": {
+      "Type": "healer",
+      "Long": "White Mage",
+      "Short": "WHM",
+      "Icon": "https://img.finalfantasyxiv.com/lds/h/7/i20QvSPcSQTybykLZDbQCgPwMw.png"
+    },
+    "25": {
+      "Type": "dps",
+      "Long": "Black Mage",
+      "Short": "BLM",
+      "Icon": "https://img.finalfantasyxiv.com/lds/h/P/V01m8YRBYcIs5vgbRtpDiqltSE.png"
+    },
+    "26": {
+      "Type": "dps",
+      "Long": "Arcanist",
+      "Short": "ACN",
+      "Icon": "https://img.finalfantasyxiv.com/lds/h/e/VYP1LKTDpt8uJVvUT7OKrXNL9E.png"
+    },
+    "27": {
+      "Type": "dps",
+      "Long": "Summoner",
+      "Short": "SMN",
+      "Icon": "https://img.finalfantasyxiv.com/lds/h/h/4ghjpyyuNelzw1Bl0sM_PBA_FE.png"
+    },
+    "28": {
+      "Type": "healer",
+      "Long": "Scholar",
+      "Short": "SCH",
+      "Icon": "https://img.finalfantasyxiv.com/lds/h/7/WdFey0jyHn9Nnt1Qnm-J3yTg5s.png"
+    },
+    "29": {
+      "Type": "dps",
+      "Long": "Rogue",
+      "Short": "ROG",
+      "Icon": "https://img.finalfantasyxiv.com/lds/h/y/wdwVVcptybfgSruoh8R344y_GA.png"
+    },
+    "30": {
+      "Type": "dps",
+      "Long": "Ninja",
+      "Short": "NIN",
+      "Icon": "https://img.finalfantasyxiv.com/lds/h/0/Fso5hanZVEEAaZ7OGWJsXpf3jw.png"
+    },
+    "31": {
+      "Type": "dps",
+      "Long": "Machinist",
+      "Short": "MCH",
+      "Icon": "https://img.finalfantasyxiv.com/lds/h/E/vmtbIlf6Uv8rVp2YFCWA25X0dc.png"
+    },
+    "32": {
+      "Type": "tank",
+      "Long": "Dark Knight",
+      "Short": "DRK",
+      "Icon": "https://img.finalfantasyxiv.com/lds/h/l/5CZEvDOMYMyVn2td9LZigsgw9s.png"
+    },
+    "33": {
+      "Type": "healer",
+      "Long": "Astrologian",
+      "Short": "AST",
+      "Icon": "https://img.finalfantasyxiv.com/lds/h/1/erCgjnMSiab4LiHpWxVc-tXAqk.png"
+    },
+    "34": {
+      "Type": "dps",
+      "Long": "Samurai",
+      "Short": "SAM",
+      "Icon": "https://img.finalfantasyxiv.com/lds/h/m/KndG72XtCFwaq1I1iqwcmO_0zc.png"
+    },
+    "35": {
+      "Type": "dps",
+      "Long": "Red Mage",
+      "Short": "RDM",
+      "Icon": "https://img.finalfantasyxiv.com/lds/h/q/s3MlLUKmRAHy0pH57PnFStHmIw.png"
+    },
+    "36": {
+      "Type": "dps",
+      "Long": "Blue Mage",
+      "Short": "BLU",
+      "Icon": "https://img.finalfantasyxiv.com/lds/h/p/jdV3RRKtWzgo226CC09vjen5sk.png"
+    },
+    "37": {
+      "Type": "tank",
+      "Long": "Gunbreaker",
+      "Short": "GNB",
+      "Icon": "https://img.finalfantasyxiv.com/lds/h/8/hg8ofSSOKzqng290No55trV4mI.png"
+    },
+    "38": {
+      "Type": "dps",
+      "Long": "Dancer",
+      "Short": "DNC",
+      "Icon": "https://img.finalfantasyxiv.com/lds/h/t/HK0jQ1y7YV9qm30cxGOVev6Cck.png"
+    }
+  },
+  "LoVType": {
+    "Poppet": "<:poppet:870450353559207947>",
+    "Gadget": "<:gadget:870450353424969729>",
+    "Monster": "<:monster:870450353399824414>",
+    "Critter": "<:critter:870450353068462112>"
+  },
+  "RetainerCities": {
+    "1": "<:retlominsa:868259353428389898>",
+    "2": "<:retgridania:868259092915957850>",
+    "3": "<:retuldah:868259353428389898>",
+    "4": "<:retishgard:868259092949528626>",
+    "7": "<:retkugane:868259093029216306>",
+    "10": "<:retcrystarium:868259092949512212>"
+  },
+  "AchievementCategories": {
+    "17": "Character: Commendation",
+    "18": "Character: Gold Saucer",
+    "62": "Items: Relic Weapons",
+    "64": "Items: Anima Weapons"
+  },
+  "CharacterRaces": {
+    "1": "Hyur",
+    "2": "Elezen",
+    "3": "Lalafell",
+    "4": "Miqo'te",
+    "5": "Roegadyn",
+    "6": "Au Ra",
+    "7": "Hrothgar",
+    "8": "Viera"
+  },
+  "CharacterTribes": {
+    "1": "Midlander",
+    "2": "Highlander",
+    "3": "Wildwood",
+    "4": "Duskwight",
+    "5": "Plainsfolk",
+    "6": "Dunesfolk",
+    "7": "Seeker of the Sun",
+    "8": "Keeper of the Moon",
+    "9": "Sea Wolf",
+    "10": "Hellsguard",
+    "11": "Raen",
+    "12": "Xaela",
+    "13": "Helion",
+    "14": "The Lost",
+    "15": "Rava",
+    "16": "Veena"
+  },
+  "CharacterGuardian": {
+    "1": "https://ffxiv.gamerescape.com/w/images/thumb/e/e8/Halone_Icon.png/35px-Halone_Icon.png",
+    "2": "https://ffxiv.gamerescape.com/w/images/thumb/6/69/Menphina_Icon.png/35px-Menphina_Icon.png",
+    "3": "https://ffxiv.gamerescape.com/w/images/thumb/7/7f/Thaliak_Icon.png/35px-Thaliak_Icon.png",
+    "4": "https://ffxiv.gamerescape.com/w/images/thumb/f/fc/Nymeia_Icon.png/35px-Nymeia_Icon.png",
+    "5": "https://ffxiv.gamerescape.com/w/images/thumb/3/3c/Llymlaen_Icon.png/35px-Llymlaen_Icon.png",
+    "6": "https://ffxiv.gamerescape.com/w/images/thumb/9/96/Oschon_Icon.png/35px-Oschon_Icon.png",
+    "7": "https://ffxiv.gamerescape.com/w/images/thumb/9/9f/Azeyma_Icon.png/35px-Azeyma_Icon.png",
+    "8": "https://ffxiv.gamerescape.com/w/images/thumb/7/70/Rhalgr_Icon.png/35px-Rhalgr_Icon.png",
+    "9": "https://ffxiv.gamerescape.com/w/images/thumb/9/9f/Azeyma_Icon.png/35px-Azeyma_Icon.png",
+    "10": "https://ffxiv.gamerescape.com/w/images/thumb/9/99/Nald%27thal_Icon.png/35px-Nald%27thal_Icon.png",
+    "11": "https://ffxiv.gamerescape.com/w/images/thumb/a/ac/Nophica_Icon.png/35px-Nophica_Icon.png",
+    "12": "https://ffxiv.gamerescape.com/w/images/thumb/2/22/Althyk_Icon.png/35px-Althyk_Icon.png"
+  },
+  "CharacterTown": {
+    "1": "https://img.finalfantasyxiv.com/lds/h/j/Xlz3DzGOKmwiDGho5aGWaudRNI.png",
+    "2": "https://img.finalfantasyxiv.com/lds/h/u/ZHuDKgNULSbEA_VTXdjeA9MlEs.png",
+    "3": "https://img.finalfantasyxiv.com/lds/h/u/qXfC-BmEzWbXW3sn62HMNnD3kU.png"
+  },
+  "GrandCompanies": {
+    "1": {
+      "Company": "Maelstrom",
+      "Rank": {
+        "1": {
+          "Name": "Storm Private Third Class",
+          "Icon": "https://ffxiv.gamerescape.com/w/images/e/e5/Stormprivatethirdclass.png"
+        },
+        "2": {
+          "Name": "Storm Private Second Class",
+          "Icon": "https://ffxiv.gamerescape.com/w/images/8/87/Stormprivatesecondclass.png"
+        },
+        "3": {
+          "Name": "Storm Private First Class",
+          "Icon": "https://ffxiv.gamerescape.com/w/images/c/c6/Stormprivatefirstclass.png"
+        },
+        "4": {
+          "Name": "Storm Corporal",
+          "Icon": "https://ffxiv.gamerescape.com/w/images/2/2d/Stormcorporal.png"
+        },
+        "5": {
+          "Name": "Storm Sergeant Third Class",
+          "Icon": "https://ffxiv.gamerescape.com/w/images/9/90/Stormsergeantthirdclass.png"
+        },
+        "6": {
+          "Name": "Storm Sergeant Second Class",
+          "Icon": "https://ffxiv.gamerescape.com/w/images/0/0f/Stormsergeantsecondclass.png"
+        },
+        "7": {
+          "Name": "Storm Sergeant First Class",
+          "Icon": "https://ffxiv.gamerescape.com/w/images/6/67/Stormsergeantfirstclass.png"
+        },
+        "8": {
+          "Name": "Chief Storm Sergeant",
+          "Icon": "https://ffxiv.gamerescape.com/w/images/a/ac/Chiefstormsergeant.png"
+        },
+        "9": {
+          "Name": "Second Storm Lieutenant",
+          "Icon": "https://ffxiv.gamerescape.com/w/images/c/cc/Secondstormlieutenant.png"
+        },
+        "10": {
+          "Name": "First Storm Lieutenant",
+          "Icon": "https://ffxiv.gamerescape.com/w/images/c/cd/Firststormlieutenant.png"
+        },
+        "11": {
+          "Name": "Storm Captain",
+          "Icon": "https://ffxiv.gamerescape.com/w/images/8/8a/Stormcaptain.png"
+        }
+      }
+    },
+    "2": {
+      "Company": "Order of the Twin Adder",
+      "Rank": {
+        "1": {
+          "Name": "Serpent Private Third Class",
+          "Icon": "https://ffxiv.gamerescape.com/w/images/1/19/Serpentprivatethirdclass.png"
+        },
+        "2": {
+          "Name": "Serpent Private Second Class",
+          "Icon": "https://ffxiv.gamerescape.com/w/images/b/b2/Serpentprivatesecondclass.png"
+        },
+        "3": {
+          "Name": "Serpent Private First Class",
+          "Icon": "https://ffxiv.gamerescape.com/w/images/5/55/Serpentprivatefirstclass.png"
+        },
+        "4": {
+          "Name": "Serpent Corporal",
+          "Icon": "https://ffxiv.gamerescape.com/w/images/0/04/Serpentcorporal.png"
+        },
+        "5": {
+          "Name": "Serpent Sergeant Third Class",
+          "Icon": "https://ffxiv.gamerescape.com/w/images/0/08/Serpentsergeantthirdclass.png"
+        },
+        "6": {
+          "Name": "Serpent Sergeant Second Class",
+          "Icon": "https://ffxiv.gamerescape.com/w/images/7/74/Serpentsergeantsecondclass.png"
+        },
+        "7": {
+          "Name": "Serpent Sergeant First Class",
+          "Icon": "https://ffxiv.gamerescape.com/w/images/5/5a/Serpentsergeantfirstclass.png"
+        },
+        "8": {
+          "Name": "Chief Serpent Sergeant",
+          "Icon": "https://ffxiv.gamerescape.com/w/images/b/ba/Chiefserpentsergeant.png"
+        },
+        "9": {
+          "Name": "Second Serpent Lieutenant",
+          "Icon": "https://ffxiv.gamerescape.com/w/images/f/f5/Secondserpentlieutenant.png"
+        },
+        "10": {
+          "Name": "First Serpent Lieutenant",
+          "Icon": "https://ffxiv.gamerescape.com/w/images/3/33/Firstserpentlieutenant.png"
+        },
+        "11": {
+          "Name": "Serpent Captain",
+          "Icon": "https://ffxiv.gamerescape.com/w/images/d/d1/Serpentcaptain.png"
+        }
+      }
+    },
+    "3": {
+      "Company": "Immortal Flames",
+      "Rank": {
+        "1": {
+          "Name": "Flame Private Third Class",
+          "Icon": "https://ffxiv.gamerescape.com/w/images/b/ba/Flameprivatethirdclass.png"
+        },
+        "2": {
+          "Name": "Flame Private Second Class",
+          "Icon": "https://ffxiv.gamerescape.com/w/images/c/c4/Flameprivatesecondclass.png"
+        },
+        "3": {
+          "Name": "Flame Private First Class",
+          "Icon": "https://ffxiv.gamerescape.com/w/images/1/1d/Flameprivatefirstclass.png"
+        },
+        "4": {
+          "Name": "Flame Corporal",
+          "Icon": "https://ffxiv.gamerescape.com/w/images/c/c7/Flamecorporal.png"
+        },
+        "5": {
+          "Name": "Flame Sergeant Third Class",
+          "Icon": "https://ffxiv.gamerescape.com/w/images/d/d1/Flamesergeantthirdclass.png"
+        },
+        "6": {
+          "Name": "Flame Sergeant Second Class",
+          "Icon": "https://ffxiv.gamerescape.com/w/images/8/8e/Flamesergeantsecondclass.png"
+        },
+        "7": {
+          "Name": "Flame Sergeant First Class",
+          "Icon": "https://ffxiv.gamerescape.com/w/images/c/cc/Flamesergeantfirstclass.png"
+        },
+        "8": {
+          "Name": "Chief Flame Sergeant",
+          "Icon": "https://ffxiv.gamerescape.com/w/images/7/71/Chiefflamesergeant.png"
+        },
+        "9": {
+          "Name": "Second Flame Lieutenant",
+          "Icon": "https://ffxiv.gamerescape.com/w/images/3/3f/Secondflamelieutenant.png"
+        },
+        "10": {
+          "Name": "First Flame Lieutenant",
+          "Icon": "https://ffxiv.gamerescape.com/w/images/a/a6/Firstflamelieutenant.png"
+        },
+        "11": {
+          "Name": "Flame Captain",
+          "Icon": "https://ffxiv.gamerescape.com/w/images/e/eb/Flamecaptain.png"
+        }
+      }
+    }
+  },
+  "DataCenters": {
+    "🌎 North America": [
+      "Aether",
+      "Primal",
+      "Crystal"
+    ],
+    "🌏 Japan": [
+      "Elemental",
+      "Gaia",
+      "Mana"
+    ],
+    "🌍 Europe": [
+      "Chaos",
+      "Light"
+    ]
+  }
+}

@@ -1,0 +1,17 @@
+C:\Users\luubr\source\repos\XIVSearch\XIVSearch\obj\Debug\XIVSearch.csproj.AssemblyReference.cache
+C:\Users\luubr\source\repos\XIVSearch\XIVSearch\obj\Debug\MainWindow.g.cs
+C:\Users\luubr\source\repos\XIVSearch\XIVSearch\obj\Debug\App.g.cs
+C:\Users\luubr\source\repos\XIVSearch\XIVSearch\obj\Debug\XIVSearch_MarkupCompile.cache
+C:\Users\luubr\source\repos\XIVSearch\XIVSearch\obj\Debug\XIVSearch_MarkupCompile.lref
+C:\Users\luubr\source\repos\XIVSearch\XIVSearch\bin\Debug\XIVSearch.exe.config
+C:\Users\luubr\source\repos\XIVSearch\XIVSearch\bin\Debug\XIVSearch.exe
+C:\Users\luubr\source\repos\XIVSearch\XIVSearch\bin\Debug\XIVSearch.pdb
+C:\Users\luubr\source\repos\XIVSearch\XIVSearch\bin\Debug\Newtonsoft.Json.dll
+C:\Users\luubr\source\repos\XIVSearch\XIVSearch\bin\Debug\Newtonsoft.Json.xml
+C:\Users\luubr\source\repos\XIVSearch\XIVSearch\obj\Debug\MainWindow.baml
+C:\Users\luubr\source\repos\XIVSearch\XIVSearch\obj\Debug\XIVSearch.g.resources
+C:\Users\luubr\source\repos\XIVSearch\XIVSearch\obj\Debug\XIVSearch.Properties.Resources.resources
+C:\Users\luubr\source\repos\XIVSearch\XIVSearch\obj\Debug\XIVSearch.csproj.GenerateResource.cache
+C:\Users\luubr\source\repos\XIVSearch\XIVSearch\obj\Debug\XIVSearch.csproj.CoreCompileInputs.cache
+C:\Users\luubr\source\repos\XIVSearch\XIVSearch\obj\Debug\XIVSearch.exe
+C:\Users\luubr\source\repos\XIVSearch\XIVSearch\obj\Debug\XIVSearch.pdb
