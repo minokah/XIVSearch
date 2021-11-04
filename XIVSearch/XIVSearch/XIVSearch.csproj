@@ -135,5 +135,17 @@
   <ItemGroup>
     <Resource Include="Icon.ico" />
   </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\ErrorWhite.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Credit.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\GitHub.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\SettingsBlur.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

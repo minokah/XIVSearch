@@ -5,22 +5,21 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:XIVSearch"
         mc:Ignorable="d"
-        Title="FFXIV Search" Height="450" Width="800" ResizeMode="CanMinimize">
+        Title="FFXIV Search" Height="450" Width="920" ResizeMode="CanMinimize">
     <Grid Background="#FF1E1E1E" Margin="0">
         <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="555*"/>
-            <ColumnDefinition Width="239*"/>
+            <ColumnDefinition/>
         </Grid.ColumnDefinitions>
         <Grid HorizontalAlignment="Left" Height="419" VerticalAlignment="Top" Width="63" Background="#FFF0F0F0">
-            <Image x:Name="SidebarMenu" HorizontalAlignment="Left" Height="63" VerticalAlignment="Top" Width="63" Source="Resources/Logo.png" Cursor="Hand" MouseLeftButtonDown="SidebarMenu_Click" MouseEnter="SidebarIcon_MouseEnter" MouseLeave="SidebarIcon_MouseLeave"/>
-            <Image x:Name="SidebarSearch" HorizontalAlignment="Left" Height="63" VerticalAlignment="Top" Width="63" Source="Resources/Search.png" Margin="0,68,0,0" Opacity="0.5" Cursor="Hand" MouseEnter="SidebarIcon_MouseEnter" MouseLeave="SidebarIcon_MouseLeave"/>
-            <Image x:Name="SidebarCSearch" HorizontalAlignment="Left" Height="63" VerticalAlignment="Top" Width="63" Source="Resources/CSearch.png" Margin="0,136,0,0" Opacity="0.5" Cursor="Hand" MouseLeftButtonDown="SidebarCSearch_Click" MouseEnter="SidebarIcon_MouseEnter" MouseLeave="SidebarIcon_MouseLeave"/>
-            <Image x:Name="SidebarExpand" HorizontalAlignment="Left" Height="63" VerticalAlignment="Top" Width="63" Source="Resources/Sidebar.png" Margin="0,356,0,0" Opacity="0.5" Cursor="Hand" MouseEnter="SidebarIcon_MouseEnter" MouseLeave="SidebarIcon_MouseLeave"/>
+            <Image x:Name="SidebarMenu" HorizontalAlignment="Left" Height="63" VerticalAlignment="Top" Width="63" Source="Resources/Logo.png" Cursor="Hand" MouseLeftButtonUp="SidebarMenu_MouseLeftButtonUp" MouseEnter="SidebarIcon_MouseEnter" MouseLeave="SidebarIcon_MouseLeave"/>
+            <Image x:Name="SidebarSearch" HorizontalAlignment="Left" Height="63" VerticalAlignment="Top" Width="63" Source="Resources/Search.png" Margin="0,68,0,0" Opacity="0.5" Cursor="Hand" MouseEnter="SidebarIcon_MouseEnter" MouseLeave="SidebarIcon_MouseLeave" MouseLeftButtonUp="SidebarSearch_MouseLeftButtonUp"/>
+            <Image x:Name="SidebarCSearch" HorizontalAlignment="Left" Height="63" VerticalAlignment="Top" Width="63" Source="Resources/CSearch.png" Margin="0,136,0,0" Opacity="0.5" Cursor="Hand" MouseLeftButtonUp="SidebarCSearch_MouseLeftButtonUp" MouseEnter="SidebarIcon_MouseEnter" MouseLeave="SidebarIcon_MouseLeave"/>
+            <Image x:Name="SidebarSettings" HorizontalAlignment="Left" Height="63" VerticalAlignment="Top" Width="63" Source="Resources/Sidebar.png" Margin="0,346,0,0" Opacity="0.5" Cursor="Hand" MouseEnter="SidebarIcon_MouseEnter" MouseLeave="SidebarIcon_MouseLeave" MouseLeftButtonUp="SidebarExpand_MouseLeftButtonUp"/>
         </Grid>
 
-        <Grid x:Name="CharacterFrame" HorizontalAlignment="Left" Height="419" Margin="63,0,0,0" VerticalAlignment="Top" Width="729" Opacity="0" Grid.ColumnSpan="2" Visibility="Visible">
+        <Grid x:Name="CharacterFrame" HorizontalAlignment="Left" Height="419" Margin="63,0,0,0" VerticalAlignment="Top" Width="851" Opacity="1" Visibility="Hidden">
             <Image x:Name="CharacterCard" HorizontalAlignment="Left" Height="419" VerticalAlignment="Top" Width="307" Source="https://img2.finalfantasyxiv.com/f/0afb42c62fb49a08c6c2aae7642ce19a_2e97c13fdd593d15d543093f8a37b6f0fl0_640x873.jpg?1635892830" Visibility="Visible"/>
-            <Grid x:Name="CharacterBanner" HorizontalAlignment="Left" Height="88" Margin="307,0,0,0" VerticalAlignment="Top" Width="422">
+            <Grid x:Name="CharacterBanner" HorizontalAlignment="Left" Height="88" Margin="307,0,0,0" VerticalAlignment="Top" Width="544">
                 <Grid.Background>
                     <LinearGradientBrush EndPoint="0.5,1" MappingMode="RelativeToBoundingBox" StartPoint="0.5,0">
                         <GradientStop Color="#FFE0B319" Offset="0.3"/>
@@ -29,11 +28,11 @@
                 </Grid.Background>
                 <Label x:Name="CharacterName" Content="Player Name" HorizontalAlignment="Left" Margin="10,6,0,0" VerticalAlignment="Top" Foreground="White" FontSize="28" FontWeight="Bold" FontFamily="Dubai"/>
                 <Label x:Name="CharacterJob" Content="Job" HorizontalAlignment="Right" Margin="0,10,23,0" VerticalAlignment="Top" Foreground="#FFFFC500" FontSize="24" FontWeight="Bold" FontFamily="Dubai"/>
-                <Label x:Name="CharacterJobLevel" Content="Lv. 99" HorizontalAlignment="Right" Margin="0,43,50,0" VerticalAlignment="Top" Foreground="White" FontSize="16" FontWeight="Bold" FontFamily="Dubai"/>
+                <Label x:Name="CharacterJobLevel" Content="Lv. 99" HorizontalAlignment="Right" Margin="0,43,23,0" VerticalAlignment="Top" Foreground="White" FontSize="16" FontWeight="Bold" FontFamily="Dubai"/>
                 <Label x:Name="CharacterWorld" Content="Server (Data Center)" HorizontalAlignment="Left" Margin="10,43,0,0" VerticalAlignment="Top" Foreground="#FFE2E2E2" FontSize="16" FontFamily="Dubai"/>
-                <Image x:Name="CharacterJobIcon" HorizontalAlignment="Left" Height="28" Margin="372,47,0,0" VerticalAlignment="Top" Width="27" Source="https://img.finalfantasyxiv.com/lds/h/E/d0Tx-vhnsMYfYpGe9MvslemEfg.png"/>
+                <Image x:Name="CharacterJobIcon" HorizontalAlignment="Left" Height="28" Margin="445,47,0,0" VerticalAlignment="Top" Width="27" Source="https://img.finalfantasyxiv.com/lds/h/E/d0Tx-vhnsMYfYpGe9MvslemEfg.png"/>
             </Grid>
-            <Grid x:Name="CharacterGCBanner" HorizontalAlignment="Left" Height="61" Margin="307,88,0,0" VerticalAlignment="Top" Width="422">
+            <Grid x:Name="CharacterGCBanner" HorizontalAlignment="Left" Height="61" Margin="307,88,0,0" VerticalAlignment="Top" Width="544">
                 <Grid.Background>
                     <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
                         <GradientStop Color="#FFF0F0F0" Offset="1"/>
@@ -41,10 +40,10 @@
                     </LinearGradientBrush>
                 </Grid.Background>
                 <Image x:Name="CharacterGCLogo" HorizontalAlignment="Left" Height="37" Margin="20,11,0,0" VerticalAlignment="Top" Width="37" Source="https://ffxiv.gamerescape.com/w/images/a/aa/Recruiticon.png"/>
-                <Label x:Name="CharacterGC" Content="No Company" HorizontalAlignment="Left" Margin="65,-1,0,0" VerticalAlignment="Top" Foreground="#FF1E1E1E" FontSize="20" FontFamily="Dubai" FontWeight="Bold"/>
-                <Label x:Name="CharacterGCRank" Content="This person has not joined a Free Company." HorizontalAlignment="Left" Margin="65,24,0,0" VerticalAlignment="Top" Foreground="#FF1E1E1E" FontSize="16" FontFamily="Dubai"/>
+                <Label x:Name="CharacterGC" Content="No Allegiance" HorizontalAlignment="Left" Margin="65,-1,0,0" VerticalAlignment="Top" Foreground="#FF1E1E1E" FontSize="20" FontFamily="Dubai" FontWeight="Bold"/>
+                <Label x:Name="CharacterGCRank" Content="This person has not joined a Grand Company." HorizontalAlignment="Left" Margin="65,24,0,0" VerticalAlignment="Top" Foreground="#FF1E1E1E" FontSize="16" FontFamily="Dubai"/>
             </Grid>
-            <Grid HorizontalAlignment="Left" Height="81" Margin="307,149,0,0" VerticalAlignment="Top" Width="422">
+            <Grid HorizontalAlignment="Left" Height="81" Margin="307,149,0,0" VerticalAlignment="Top" Width="544">
                 <Image x:Name="CharacterGender" HorizontalAlignment="Left" Height="37" Margin="20,20,0,0" VerticalAlignment="Top" Width="37" Source="https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/120/facebook/304/male-sign_2642-fe0f.png"/>
                 <Label x:Name="CharacterRace" Content="Race" HorizontalAlignment="Left" Margin="62,0,0,0" VerticalAlignment="Top" Foreground="#FFFFC500" FontSize="20" FontFamily="Dubai" FontWeight="Bold"/>
                 <Label x:Name="CharacterRaceClan" Content="Clan" HorizontalAlignment="Left" Margin="62,24,0,0" VerticalAlignment="Top" Foreground="White" FontSize="16" FontFamily="Dubai"/>
@@ -52,22 +51,181 @@
                 <Image x:Name="CharacterCity" HorizontalAlignment="Right" Height="25" Margin="0,24,53,0" VerticalAlignment="Top" Width="25" Source="https://img.finalfantasyxiv.com/lds/h/u/ZHuDKgNULSbEA_VTXdjeA9MlEs.png"/>
                 <Image x:Name="CharacterGuardian" HorizontalAlignment="Right" Height="25" Margin="0,24,23,0" VerticalAlignment="Top" Width="25" Source="https://img.finalfantasyxiv.com/lds/h/T/3mefpQgIoLOwIfEiTxmEuoncW8.png"/>
             </Grid>
+            <Grid x:Name="CharacterFCFrame" HorizontalAlignment="Left" Height="54" Margin="307,230,0,0" VerticalAlignment="Top" Width="544" Visibility="Hidden">
+                <Image x:Name="CharacterFCCrest" HorizontalAlignment="Left" Height="37" Margin="20,7,0,0" VerticalAlignment="Top" Width="37" Source="https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/120/facebook/304/male-sign_2642-fe0f.png" RenderTransformOrigin="0.541,0.216"/>
+                <Label x:Name="CharacterFC" Content="Free Company" HorizontalAlignment="Left" Margin="62,-5,0,0" VerticalAlignment="Top" Foreground="#FFFFC500" FontSize="20" FontFamily="Dubai" FontWeight="Bold"/>
+                <Label x:Name="CharacterFCTag" Content="Clan Tag" HorizontalAlignment="Left" Margin="62,18,0,0" VerticalAlignment="Top" Foreground="White" FontSize="16" FontFamily="Dubai"/>
+            </Grid>
+            <Grid HorizontalAlignment="Left" Height="135" Margin="307,284,0,0" VerticalAlignment="Top" Width="544">
+                <Grid HorizontalAlignment="Left" Height="54" Margin="20,10,0,0" VerticalAlignment="Top" Width="27">
+                    <Image x:Name="CharacterJobPLD" HorizontalAlignment="Left" Height="28" VerticalAlignment="Top" Width="27" Source="https://img.finalfantasyxiv.com/lds/h/E/d0Tx-vhnsMYfYpGe9MvslemEfg.png" RenderTransformOrigin="0.963,0.536"/>
+                    <Label x:Name="CharacterJobPLDLevel" Content="99" Margin="2,22,1,0" VerticalAlignment="Top" Foreground="White" FontSize="13" FontFamily="Dubai" RenderTransformOrigin="4.796,0.405" Height="28"/>
+                </Grid>
+                <Grid HorizontalAlignment="Left" Height="54" Margin="47,10,0,0" VerticalAlignment="Top" Width="27">
+                    <Image x:Name="CharacterJobWAR" HorizontalAlignment="Left" Height="28" VerticalAlignment="Top" Width="27" Source="https://img.finalfantasyxiv.com/lds/h/y/A3UhbjZvDeN3tf_6nJ85VP0RY0.png" RenderTransformOrigin="0.963,0.536"/>
+                    <Label x:Name="CharacterJobWARLevel" Content="99" Margin="2,22,1,0" VerticalAlignment="Top" Foreground="White" FontSize="13" FontFamily="Dubai" RenderTransformOrigin="4.796,0.405" Height="28"/>
+                </Grid>
+                <Grid HorizontalAlignment="Left" Height="54" Margin="74,10,0,0" VerticalAlignment="Top" Width="27">
+                    <Image x:Name="CharacterJobDRK" HorizontalAlignment="Left" Height="28" VerticalAlignment="Top" Width="27" Source="https://img.finalfantasyxiv.com/lds/h/l/5CZEvDOMYMyVn2td9LZigsgw9s.png" RenderTransformOrigin="0.963,0.536"/>
+                    <Label x:Name="CharacterJobDRKLevel" Content="99" Margin="2,22,1,0" VerticalAlignment="Top" Foreground="White" FontSize="13" FontFamily="Dubai" RenderTransformOrigin="4.796,0.405" Height="28"/>
+                </Grid>
+                <Grid HorizontalAlignment="Left" Height="54" Margin="101,10,0,0" VerticalAlignment="Top" Width="27">
+                    <Image x:Name="CharacterJobGNB" HorizontalAlignment="Left" Height="28" VerticalAlignment="Top" Width="27" Source="https://img.finalfantasyxiv.com/lds/h/8/hg8ofSSOKzqng290No55trV4mI.png" RenderTransformOrigin="0.963,0.536"/>
+                    <Label x:Name="CharacterJobGNBLevel" Content="99" Margin="2,22,1,0" VerticalAlignment="Top" Foreground="White" FontSize="13" FontFamily="Dubai" RenderTransformOrigin="4.796,0.405" Height="28"/>
+                </Grid>
+                <Grid HorizontalAlignment="Left" Height="54" Margin="128,10,0,0" VerticalAlignment="Top" Width="27">
+                    <Image x:Name="CharacterJobWHM" HorizontalAlignment="Left" Height="28" VerticalAlignment="Top" Width="27" Source="https://img.finalfantasyxiv.com/lds/h/7/i20QvSPcSQTybykLZDbQCgPwMw.png" RenderTransformOrigin="0.963,0.536"/>
+                    <Label x:Name="CharacterJobWHMLevel" Content="99" Margin="2,22,1,0" VerticalAlignment="Top" Foreground="White" FontSize="13" FontFamily="Dubai" RenderTransformOrigin="4.796,0.405" Height="28"/>
+                </Grid>
+                <Grid HorizontalAlignment="Left" Height="54" Margin="155,10,0,0" VerticalAlignment="Top" Width="27">
+                    <Image x:Name="CharacterJobSCH" HorizontalAlignment="Left" Height="28" VerticalAlignment="Top" Width="27" Source="https://img.finalfantasyxiv.com/lds/h/7/WdFey0jyHn9Nnt1Qnm-J3yTg5s.png" RenderTransformOrigin="0.963,0.536"/>
+                    <Label x:Name="CharacterJobSCHLevel" Content="99" Margin="2,22,1,0" VerticalAlignment="Top" Foreground="White" FontSize="13" FontFamily="Dubai" RenderTransformOrigin="4.796,0.405" Height="28"/>
+                </Grid>
+                <Grid HorizontalAlignment="Left" Height="54" Margin="182,10,0,0" VerticalAlignment="Top" Width="27">
+                    <Image x:Name="CharacterJobAST" HorizontalAlignment="Left" Height="28" VerticalAlignment="Top" Width="27" Source="https://img.finalfantasyxiv.com/lds/h/1/erCgjnMSiab4LiHpWxVc-tXAqk.png" RenderTransformOrigin="0.963,0.536"/>
+                    <Label x:Name="CharacterJobASTLevel" Content="99" Margin="2,22,1,0" VerticalAlignment="Top" Foreground="White" FontSize="13" FontFamily="Dubai" RenderTransformOrigin="4.796,0.405" Height="28"/>
+                </Grid>
+                <Grid HorizontalAlignment="Left" Height="54" Margin="209,10,0,0" VerticalAlignment="Top" Width="27">
+                    <Image x:Name="CharacterJobMNK" HorizontalAlignment="Left" Height="28" VerticalAlignment="Top" Width="27" Source="https://img.finalfantasyxiv.com/lds/h/K/HW6tKOg4SOJbL8Z20GnsAWNjjM.png" RenderTransformOrigin="0.963,0.536"/>
+                    <Label x:Name="CharacterJobMNKLevel" Content="99" Margin="2,22,1,0" VerticalAlignment="Top" Foreground="White" FontSize="13" FontFamily="Dubai" RenderTransformOrigin="4.796,0.405" Height="28"/>
+                </Grid>
+                <Grid HorizontalAlignment="Left" Height="54" Margin="236,10,0,0" VerticalAlignment="Top" Width="27">
+                    <Image x:Name="CharacterJobDRG" HorizontalAlignment="Left" Height="28" VerticalAlignment="Top" Width="27" Source="https://img.finalfantasyxiv.com/lds/h/m/gX4OgBIHw68UcMU79P7LYCpldA.png" RenderTransformOrigin="0.963,0.536"/>
+                    <Label x:Name="CharacterJobDRGLevel" Content="99" Margin="2,22,1,0" VerticalAlignment="Top" Foreground="White" FontSize="13" FontFamily="Dubai" RenderTransformOrigin="4.796,0.405" Height="28"/>
+                </Grid>
+                <Grid HorizontalAlignment="Left" Height="54" Margin="263,10,0,0" VerticalAlignment="Top" Width="27">
+                    <Image x:Name="CharacterJobNIN" HorizontalAlignment="Left" Height="28" VerticalAlignment="Top" Width="27" Source="https://img.finalfantasyxiv.com/lds/h/0/Fso5hanZVEEAaZ7OGWJsXpf3jw.png" RenderTransformOrigin="0.963,0.536"/>
+                    <Label x:Name="CharacterJobNINLevel" Content="99" Margin="2,22,1,0" VerticalAlignment="Top" Foreground="White" FontSize="13" FontFamily="Dubai" RenderTransformOrigin="4.796,0.405" Height="28"/>
+                </Grid>
+                <Grid HorizontalAlignment="Left" Height="54" Margin="290,10,0,0" VerticalAlignment="Top" Width="27">
+                    <Image x:Name="CharacterJobSAM" HorizontalAlignment="Left" Height="28" VerticalAlignment="Top" Width="27" Source="https://img.finalfantasyxiv.com/lds/h/m/KndG72XtCFwaq1I1iqwcmO_0zc.png" RenderTransformOrigin="0.963,0.536"/>
+                    <Label x:Name="CharacterJobSAMLevel" Content="99" Margin="2,22,1,0" VerticalAlignment="Top" Foreground="White" FontSize="13" FontFamily="Dubai" RenderTransformOrigin="4.796,0.405" Height="28"/>
+                </Grid>
+                <Grid HorizontalAlignment="Left" Height="54" Margin="317,10,0,0" VerticalAlignment="Top" Width="27">
+                    <Image x:Name="CharacterJobBRD" HorizontalAlignment="Left" Height="28" VerticalAlignment="Top" Width="27" Source="https://img.finalfantasyxiv.com/lds/h/F/KWI-9P3RX_Ojjn_mwCS2N0-3TI.png" RenderTransformOrigin="0.963,0.536"/>
+                    <Label x:Name="CharacterJobBRDLevel" Content="99" Margin="2,22,1,0" VerticalAlignment="Top" Foreground="White" FontSize="13" FontFamily="Dubai" RenderTransformOrigin="4.796,0.405" Height="28"/>
+                </Grid>
+                <Grid HorizontalAlignment="Left" Height="54" Margin="344,10,0,0" VerticalAlignment="Top" Width="27">
+                    <Image x:Name="CharacterJobMCH" HorizontalAlignment="Left" Height="28" VerticalAlignment="Top" Width="27" Source="https://img.finalfantasyxiv.com/lds/h/E/vmtbIlf6Uv8rVp2YFCWA25X0dc.png" RenderTransformOrigin="0.963,0.536"/>
+                    <Label x:Name="CharacterJobMCHLevel" Content="99" Margin="2,22,1,0" VerticalAlignment="Top" Foreground="White" FontSize="13" FontFamily="Dubai" RenderTransformOrigin="4.796,0.405" Height="28"/>
+                </Grid>
+                <Grid HorizontalAlignment="Left" Height="54" Margin="373,10,0,0" VerticalAlignment="Top" Width="27">
+                    <Image x:Name="CharacterJobDNC" HorizontalAlignment="Left" Height="28" VerticalAlignment="Top" Width="27" Source="https://img.finalfantasyxiv.com/lds/h/t/HK0jQ1y7YV9qm30cxGOVev6Cck.png" RenderTransformOrigin="0.963,0.536"/>
+                    <Label x:Name="CharacterJobDNCLevel" Content="99" Margin="2,22,1,0" VerticalAlignment="Top" Foreground="White" FontSize="13" FontFamily="Dubai" RenderTransformOrigin="4.796,0.405" Height="28"/>
+                </Grid>
+                <Grid HorizontalAlignment="Left" Height="54" Margin="400,10,0,0" VerticalAlignment="Top" Width="27">
+                    <Image x:Name="CharacterJobBLM" HorizontalAlignment="Left" Height="28" VerticalAlignment="Top" Width="27" Source="https://img.finalfantasyxiv.com/lds/h/P/V01m8YRBYcIs5vgbRtpDiqltSE.png" RenderTransformOrigin="0.963,0.536"/>
+                    <Label x:Name="CharacterJobBLMLevel" Content="99" Margin="2,22,1,0" VerticalAlignment="Top" Foreground="White" FontSize="13" FontFamily="Dubai" RenderTransformOrigin="4.796,0.405" Height="28"/>
+                </Grid>
+                <Grid HorizontalAlignment="Left" Height="54" Margin="427,10,0,0" VerticalAlignment="Top" Width="27">
+                    <Image x:Name="CharacterJobSMN" HorizontalAlignment="Left" Height="28" VerticalAlignment="Top" Width="27" Source="https://img.finalfantasyxiv.com/lds/h/h/4ghjpyyuNelzw1Bl0sM_PBA_FE.png" RenderTransformOrigin="0.963,0.536"/>
+                    <Label x:Name="CharacterJobSMNLevel" Content="99" Margin="2,22,1,0" VerticalAlignment="Top" Foreground="White" FontSize="13" FontFamily="Dubai" RenderTransformOrigin="4.796,0.405" Height="28"/>
+                </Grid>
+                <Grid HorizontalAlignment="Left" Height="54" Margin="454,10,0,0" VerticalAlignment="Top" Width="27">
+                    <Image x:Name="CharacterJobRDM" HorizontalAlignment="Left" Height="28" VerticalAlignment="Top" Width="27" Source="https://img.finalfantasyxiv.com/lds/h/q/s3MlLUKmRAHy0pH57PnFStHmIw.png" RenderTransformOrigin="0.963,0.536"/>
+                    <Label x:Name="CharacterJobRDMLevel" Content="99" Margin="2,22,1,0" VerticalAlignment="Top" Foreground="White" FontSize="13" FontFamily="Dubai" RenderTransformOrigin="4.796,0.405" Height="28"/>
+                </Grid>
+                <Grid HorizontalAlignment="Left" Height="54" Margin="481,10,0,0" VerticalAlignment="Top" Width="27">
+                    <Image x:Name="CharacterJobBLU" HorizontalAlignment="Left" Height="28" VerticalAlignment="Top" Width="27" Source="https://img.finalfantasyxiv.com/lds/h/p/jdV3RRKtWzgo226CC09vjen5sk.png" RenderTransformOrigin="0.963,0.536"/>
+                    <Label x:Name="CharacterJobBLULevel" Content="99" Margin="2,22,1,0" VerticalAlignment="Top" Foreground="White" FontSize="13" FontFamily="Dubai" RenderTransformOrigin="4.796,0.405" Height="28"/>
+                </Grid>
+                <Grid HorizontalAlignment="Left" Height="54" Margin="20,64,0,0" VerticalAlignment="Top" Width="27">
+                    <Image x:Name="CharacterJobCRP" HorizontalAlignment="Left" Height="28" VerticalAlignment="Top" Width="27" Source="https://img.finalfantasyxiv.com/lds/h/v/YCN6F-xiXf03Ts3pXoBihh2OBk.png" RenderTransformOrigin="0.963,0.536"/>
+                    <Label x:Name="CharacterJobCRPLevel" Content="99" Margin="2,22,1,0" VerticalAlignment="Top" Foreground="White" FontSize="13" FontFamily="Dubai" RenderTransformOrigin="4.796,0.405" Height="28"/>
+                </Grid>
+                <Grid HorizontalAlignment="Left" Height="54" Margin="47,64,0,0" VerticalAlignment="Top" Width="27">
+                    <Image x:Name="CharacterJobBSM" HorizontalAlignment="Left" Height="28" VerticalAlignment="Top" Width="27" Source="https://img.finalfantasyxiv.com/lds/h/5/EEHVV5cIPkOZ6v5ALaoN5XSVRU.png" RenderTransformOrigin="0.963,0.536"/>
+                    <Label x:Name="CharacterJobBSMLevel" Content="99" Margin="2,22,1,0" VerticalAlignment="Top" Foreground="White" FontSize="13" FontFamily="Dubai" RenderTransformOrigin="4.796,0.405" Height="28"/>
+                </Grid>
+                <Grid HorizontalAlignment="Left" Height="54" Margin="74,64,0,0" VerticalAlignment="Top" Width="27">
+                    <Image x:Name="CharacterJobARM" HorizontalAlignment="Left" Height="28" VerticalAlignment="Top" Width="27" Source="https://img.finalfantasyxiv.com/lds/h/G/Rq5wcK3IPEaAB8N-T9l6tBPxCY.png" RenderTransformOrigin="0.963,0.536"/>
+                    <Label x:Name="CharacterJobARMLevel" Content="99" Margin="2,22,1,0" VerticalAlignment="Top" Foreground="White" FontSize="13" FontFamily="Dubai" RenderTransformOrigin="4.796,0.405" Height="28"/>
+                </Grid>
+                <Grid HorizontalAlignment="Left" Height="54" Margin="101,64,0,0" VerticalAlignment="Top" Width="27">
+                    <Image x:Name="CharacterJobGSM" HorizontalAlignment="Left" Height="28" VerticalAlignment="Top" Width="27" Source="https://img.finalfantasyxiv.com/lds/h/L/LbEjgw0cwO_2gQSmhta9z03pjM.png" RenderTransformOrigin="0.963,0.536"/>
+                    <Label x:Name="CharacterJobGSMLevel" Content="99" Margin="2,22,1,0" VerticalAlignment="Top" Foreground="White" FontSize="13" FontFamily="Dubai" RenderTransformOrigin="4.796,0.405" Height="28"/>
+                </Grid>
+                <Grid HorizontalAlignment="Left" Height="54" Margin="128,64,0,0" VerticalAlignment="Top" Width="27">
+                    <Image x:Name="CharacterJobLTW" HorizontalAlignment="Left" Height="28" VerticalAlignment="Top" Width="27" Source="https://img.finalfantasyxiv.com/lds/h/b/ACAcQe3hWFxbWRVPqxKj_MzDiY.png" RenderTransformOrigin="0.963,0.536"/>
+                    <Label x:Name="CharacterJobLTWLevel" Content="99" Margin="2,22,1,0" VerticalAlignment="Top" Foreground="White" FontSize="13" FontFamily="Dubai" RenderTransformOrigin="4.796,0.405" Height="28"/>
+                </Grid>
+                <Grid HorizontalAlignment="Left" Height="54" Margin="155,64,0,0" VerticalAlignment="Top" Width="27">
+                    <Image x:Name="CharacterJobWVR" HorizontalAlignment="Left" Height="28" VerticalAlignment="Top" Width="27" Source="https://img.finalfantasyxiv.com/lds/h/X/E69jrsOMGFvFpCX87F5wqgT_Vo.png" RenderTransformOrigin="0.963,0.536"/>
+                    <Label x:Name="CharacterJobWVRLevel" Content="99" Margin="2,22,1,0" VerticalAlignment="Top" Foreground="White" FontSize="13" FontFamily="Dubai" RenderTransformOrigin="4.796,0.405" Height="28"/>
+                </Grid>
+                <Grid HorizontalAlignment="Left" Height="54" Margin="182,64,0,0" VerticalAlignment="Top" Width="27">
+                    <Image x:Name="CharacterJobALC" HorizontalAlignment="Left" Height="28" VerticalAlignment="Top" Width="27" Source="https://img.finalfantasyxiv.com/lds/h/C/bBVQ9IFeXqjEdpuIxmKvSkqalE.png" RenderTransformOrigin="0.963,0.536"/>
+                    <Label x:Name="CharacterJobALCLevel" Content="99" Margin="2,22,1,0" VerticalAlignment="Top" Foreground="White" FontSize="13" FontFamily="Dubai" RenderTransformOrigin="4.796,0.405" Height="28"/>
+                </Grid>
+                <Grid HorizontalAlignment="Left" Height="54" Margin="209,64,0,0" VerticalAlignment="Top" Width="27">
+                    <Image x:Name="CharacterJobCUL" HorizontalAlignment="Left" Height="28" VerticalAlignment="Top" Width="27" Source="https://img.finalfantasyxiv.com/lds/h/m/1kMI2v_KEVgo30RFvdFCyySkFo.png" RenderTransformOrigin="0.963,0.536"/>
+                    <Label x:Name="CharacterJobCULLevel" Content="99" Margin="2,22,1,0" VerticalAlignment="Top" Foreground="White" FontSize="13" FontFamily="Dubai" RenderTransformOrigin="4.796,0.405" Height="28"/>
+                </Grid>
+                <Grid HorizontalAlignment="Left" Height="54" Margin="236,64,0,0" VerticalAlignment="Top" Width="27">
+                    <Image x:Name="CharacterJobMIN" HorizontalAlignment="Left" Height="28" VerticalAlignment="Top" Width="27" Source="https://img.finalfantasyxiv.com/lds/h/A/aM2Dd6Vo4HW_UGasK7tLuZ6fu4.png" RenderTransformOrigin="0.963,0.536"/>
+                    <Label x:Name="CharacterJobMINLevel" Content="99" Margin="2,22,1,0" VerticalAlignment="Top" Foreground="White" FontSize="13" FontFamily="Dubai" RenderTransformOrigin="4.796,0.405" Height="28"/>
+                </Grid>
+                <Grid HorizontalAlignment="Left" Height="54" Margin="263,64,0,0" VerticalAlignment="Top" Width="27">
+                    <Image x:Name="CharacterJobBTN" HorizontalAlignment="Left" Height="28" VerticalAlignment="Top" Width="27" Source="https://img.finalfantasyxiv.com/lds/h/I/jGRnjIlwWridqM-mIPNew6bhHM.png" RenderTransformOrigin="0.963,0.536"/>
+                    <Label x:Name="CharacterJobBTNLevel" Content="99" Margin="2,22,1,0" VerticalAlignment="Top" Foreground="White" FontSize="13" FontFamily="Dubai" RenderTransformOrigin="4.796,0.405" Height="28"/>
+                </Grid>
+                <Grid HorizontalAlignment="Left" Height="54" Margin="290,64,0,0" VerticalAlignment="Top" Width="27">
+                    <Image x:Name="CharacterJobFSH" HorizontalAlignment="Left" Height="28" VerticalAlignment="Top" Width="27" Source="https://img.finalfantasyxiv.com/lds/h/x/B4Azydbn7Prubxt7OL9p1LZXZ0.png" RenderTransformOrigin="0.963,0.536"/>
+                    <Label x:Name="CharacterJobFSHLevel" Content="99" Margin="2,22,1,0" VerticalAlignment="Top" Foreground="White" FontSize="13" FontFamily="Dubai" RenderTransformOrigin="4.796,0.405" Height="28"/>
+                </Grid>
+                <Grid HorizontalAlignment="Left" Height="54" Margin="344,64,0,0" VerticalAlignment="Top" Width="27">
+                    <Image x:Name="CharacterJobEureka" HorizontalAlignment="Left" Height="28" VerticalAlignment="Top" Width="27" Source="https://ffxiv.gamerescape.com/w/images/thumb/d/db/061833.png/32px-061833.png" RenderTransformOrigin="0.963,0.536"/>
+                    <Label x:Name="CharacterJobEurekaLevel" Content="99" Margin="2,22,1,0" VerticalAlignment="Top" Foreground="White" FontSize="13" FontFamily="Dubai" RenderTransformOrigin="4.796,0.405" Height="28"/>
+                </Grid>
+                <Grid HorizontalAlignment="Left" Height="54" Margin="371,64,0,0" VerticalAlignment="Top" Width="27">
+                    <Image x:Name="CharacterJobBozja" HorizontalAlignment="Left" Height="28" VerticalAlignment="Top" Width="27" Source="https://static.wikia.nocookie.net/finalfantasy/images/0/01/FFXIV_Bozja_Icon.png/revision/latest" RenderTransformOrigin="0.963,0.536"/>
+                    <Label x:Name="CharacterJobBozjaLevel" Content="99" Margin="2,22,1,0" VerticalAlignment="Top" Foreground="White" FontSize="13" FontFamily="Dubai" RenderTransformOrigin="4.796,0.405" Height="28"/>
+                </Grid>
+            </Grid>
         </Grid>
-        <Grid x:Name="CharSearchFrame" HorizontalAlignment="Left" Height="421" Margin="63,0,0,0" VerticalAlignment="Top" Width="731" Visibility="Visible" IsEnabled="False" Opacity="0" Grid.ColumnSpan="2">
+        <Grid x:Name="ItemSearchFrame" HorizontalAlignment="Left" Height="421" Margin="63,0,0,0" VerticalAlignment="Top" Width="851" Visibility="Hidden" IsEnabled="False" Opacity="1">
+            <Label Content="Item Search" HorizontalAlignment="Left" Margin="21,10,0,0" VerticalAlignment="Top" Foreground="White" FontWeight="Bold" FontSize="24" FontFamily="Dubai"/>
+            <TextBox x:Name="ItemSearchBox" HorizontalAlignment="Left" Height="35" Margin="21,82,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="295" FontFamily="Dubai" FontSize="21" Background="#FF3E3E3E" BorderBrush="{x:Null}" Foreground="White" SelectionBrush="#FF811B1B"/>
+            <Label Content="Enter an item name to find out more" HorizontalAlignment="Left" Margin="21,45,0,0" VerticalAlignment="Top" Foreground="White" FontSize="16" FontFamily="Dubai"/>
+            <Grid x:Name="ItemSearchErrorFrame" HorizontalAlignment="Left" Height="40" Margin="21,355,0,0" VerticalAlignment="Top" Width="295" Background="#FFFF3030" Visibility="Hidden">
+                <Label x:Name="ItemSearchErrorMessage" Content="Error Message" HorizontalAlignment="Left" Margin="37,3,0,0" VerticalAlignment="Top" FontFamily="Dubai" FontSize="14" RenderTransformOrigin="0.495,-0.324" Foreground="White" Height="30"/>
+                <Image HorizontalAlignment="Left" Height="40" VerticalAlignment="Top" Width="40" Source="Resources/ErrorWhite.png" Margin="2,-1,0,0"/>
+            </Grid>
+            <Border x:Name="ItemSearchFind" BorderBrush="Black" BorderThickness="1" HorizontalAlignment="Left" Height="30" Margin="21,122,0,0" VerticalAlignment="Top" Width="295" CornerRadius="5" Background="#FF3993E4" Cursor="Hand" MouseLeftButtonUp="CharSearchFind_MouseLeftButtonUp">
+                <Label Content="Search" Margin="-1" Foreground="White" Height="30" FontFamily="Dubai" FontSize="15" HorizontalContentAlignment="Center"/>
+            </Border>
+            <ListBox x:Name="ItemSearchResults" HorizontalAlignment="Left" Height="366" Margin="466,45,0,0" VerticalAlignment="Top" Width="375" BorderBrush="{x:Null}" SelectionChanged="CharSearchEntryClick" Foreground="{x:Null}" Background="{x:Null}"/>
+            <Grid x:Name="ItemSearchResultsHeader" HorizontalAlignment="Left" Height="45" Margin="456,0,0,0" VerticalAlignment="Top" Width="385" Visibility="Hidden">
+                <Grid.Background>
+                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                        <GradientStop Color="#FF2B2B2B" Offset="0"/>
+                        <GradientStop Color="#FF1B1B1B" Offset="1"/>
+                    </LinearGradientBrush>
+                </Grid.Background>
+                <Label Content="Results" HorizontalAlignment="Left" Margin="10,6,0,0" VerticalAlignment="Top" Foreground="White" FontFamily="Dubai" FontSize="18" FontWeight="Bold"/>
+            </Grid>
+            <Grid HorizontalAlignment="Left" Height="29" Margin="21,187,0,0" VerticalAlignment="Top" Width="295" Background="#FFCB1818">
+                <Label Content="Job" HorizontalAlignment="Left" VerticalAlignment="Top" Foreground="White" FontSize="16" FontFamily="Dubai" Width="40" HorizontalContentAlignment="Center" Height="29" Margin="0,-3,0,0"/>
+                <ComboBox x:Name="ItemSearchFilterJob" HorizontalAlignment="Left" Margin="89,0,0,0" VerticalAlignment="Top" Width="206" Background="{x:Null}" BorderBrush="{x:Null}" Foreground="Black" Height="29" FontFamily="Dubai" FontSize="16">
+                    <ComboBoxItem Content="Tanky Tank" Foreground="Black" FontFamily="Dubai" Background="#00000000"/>
+                    <ComboBoxItem Content="Healy Healer"/>
+                    <ComboBoxItem Content="Damaging DPS"/>
+                </ComboBox>
+            </Grid>
+        </Grid>
+        <Grid x:Name="CharSearchFrame" HorizontalAlignment="Left" Height="421" Margin="63,0,0,0" VerticalAlignment="Top" Width="851" Visibility="Hidden" IsEnabled="False" Opacity="1">
             <Label Content="Character Lookup" HorizontalAlignment="Left" Margin="21,10,0,0" VerticalAlignment="Top" Foreground="White" FontWeight="Bold" FontSize="24" FontFamily="Dubai"/>
             <TextBox x:Name="CharSearchBox" HorizontalAlignment="Left" Height="35" Margin="21,82,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="295" FontFamily="Dubai" FontSize="21" Background="#FF3E3E3E" BorderBrush="{x:Null}" Foreground="White" SelectionBrush="#FF811B1B"/>
             <Label Content="Enter a character's name to find them" HorizontalAlignment="Left" Margin="21,45,0,0" VerticalAlignment="Top" Foreground="White" FontSize="16" FontFamily="Dubai"/>
-            <Grid x:Name="CSearchErrorFrame" HorizontalAlignment="Left" Height="73" Margin="21,322,0,0" VerticalAlignment="Top" Width="295" Background="#FFF0F0F0" Visibility="Hidden">
-                <Grid HorizontalAlignment="Left" Height="32" VerticalAlignment="Top" Width="295" Background="#FFC71919">
-                    <Label Content="Error" HorizontalAlignment="Left" Margin="10,-5,0,-6" VerticalAlignment="Top" Foreground="White" FontFamily="Dubai" FontWeight="Bold" FontSize="20"/>
-                </Grid>
-                <Label x:Name="CSearchErrorMessage" Content="Error Message" HorizontalAlignment="Left" Margin="10,37,0,0" VerticalAlignment="Top" FontFamily="Dubai" FontSize="14"/>
+            <Grid x:Name="CSearchErrorFrame" HorizontalAlignment="Left" Height="40" Margin="21,355,0,0" VerticalAlignment="Top" Width="295" Background="#FFFF3030" Visibility="Hidden">
+                <Label x:Name="CSearchErrorMessage" Content="Error Message" HorizontalAlignment="Left" Margin="37,3,0,0" VerticalAlignment="Top" FontFamily="Dubai" FontSize="14" RenderTransformOrigin="0.495,-0.324" Foreground="White" Height="30"/>
+                <Image HorizontalAlignment="Left" Height="40" VerticalAlignment="Top" Width="40" Source="Resources/ErrorWhite.png" Margin="2,-1,0,0"/>
             </Grid>
-            <Border x:Name="CharSearchFind" BorderBrush="Black" BorderThickness="1" HorizontalAlignment="Left" Height="30" Margin="21,122,0,0" VerticalAlignment="Top" Width="295" CornerRadius="5" Background="#FF3993E4" Cursor="Hand" MouseLeftButtonDown="CharSearchFind_Click">
-                <Label x:Name="CharSearchFindLabel" Content="Search" Margin="-1" Foreground="White" Height="30" FontFamily="Dubai" FontSize="15" HorizontalContentAlignment="Center"/>
+            <Border x:Name="CharSearchFind" BorderBrush="Black" BorderThickness="1" HorizontalAlignment="Left" Height="30" Margin="21,122,0,0" VerticalAlignment="Top" Width="295" CornerRadius="5" Background="#FF3993E4" Cursor="Hand" MouseLeftButtonUp="CharSearchFind_MouseLeftButtonUp">
+                <Label Content="Search" Margin="-1" Foreground="White" Height="30" FontFamily="Dubai" FontSize="15" HorizontalContentAlignment="Center"/>
             </Border>
-            <ListBox x:Name="CharSearchResults" HorizontalAlignment="Left" Height="366" Margin="346,45,0,0" VerticalAlignment="Top" Width="375" BorderBrush="{x:Null}" SelectionChanged="CharSearchEntryClick" Foreground="{x:Null}" Background="{x:Null}"/>
-            <Grid x:Name="CharSearchResultsHeader" HorizontalAlignment="Left" Height="45" Margin="346,0,0,0" VerticalAlignment="Top" Width="385" Visibility="Hidden">
+            <ListBox x:Name="CharSearchResults" HorizontalAlignment="Left" Height="366" Margin="466,45,0,0" VerticalAlignment="Top" Width="375" BorderBrush="{x:Null}" SelectionChanged="CharSearchEntryClick" Foreground="{x:Null}" Background="{x:Null}"/>
+            <Grid x:Name="CharSearchResultsHeader" HorizontalAlignment="Left" Height="45" Margin="456,0,0,0" VerticalAlignment="Top" Width="385" Visibility="Hidden">
                 <Grid.Background>
                     <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
                         <GradientStop Color="#FF2B2B2B" Offset="0"/>
@@ -77,21 +235,24 @@
                 <Label Content="Results" HorizontalAlignment="Left" Margin="10,6,0,0" VerticalAlignment="Top" Foreground="White" FontFamily="Dubai" FontSize="18" FontWeight="Bold"/>
             </Grid>
         </Grid>
-        <Grid x:Name="MenuFrame" HorizontalAlignment="Left" Height="421" Margin="63,0,0,0" VerticalAlignment="Top" Width="731" Opacity="1" Visibility="Visible" Grid.ColumnSpan="2" Panel.ZIndex="-1">
+        <Grid x:Name="MenuFrame" HorizontalAlignment="Left" Height="421" Margin="63,0,0,0" VerticalAlignment="Top" Width="851" Opacity="1" Visibility="Hidden" Panel.ZIndex="-1">
             <Label Content="Final Fantasy XIV Search Tool" HorizontalAlignment="Left" Margin="21,10,0,0" VerticalAlignment="Top" Foreground="White" FontWeight="Bold" FontSize="24" FontFamily="Dubai"/>
             <Label Content="Search for things from the critically acclaimed MMORPG" HorizontalAlignment="Left" Margin="21,45,0,0" VerticalAlignment="Top" Foreground="White" FontSize="16" FontFamily="Dubai"/>
-            <Image HorizontalAlignment="Left" Height="622" Margin="420,-26,-311,-175" VerticalAlignment="Top" Width="622" Source="Resources/Moogle.png" IsEnabled="False"/>
-            <Ellipse HorizontalAlignment="Left" Height="92" Margin="21,207,0,0" Stroke="Black" VerticalAlignment="Top" Width="92">
-                <Ellipse.Fill>
-                    <ImageBrush ImageSource="Resources/ProfileTemplate.png"/>
-                </Ellipse.Fill>
-            </Ellipse>
-            <Border BorderThickness="1" HorizontalAlignment="Left" Height="31" Margin="123,235,0,0" VerticalAlignment="Top" Width="209" Background="#FF9B9B9B" CornerRadius="5">
-                <Label Content="Login with Character" Margin="-1" Foreground="#FFC7C7C7" FontSize="16" FontFamily="Dubai" Width="209" HorizontalContentAlignment="Center" Height="31"/>
+            <Image HorizontalAlignment="Left" Height="622" Margin="500,-27,-271,-174" VerticalAlignment="Top" Width="622" Source="Resources/Moogle.png" IsEnabled="False"/>
+            <Border BorderThickness="1" HorizontalAlignment="Left" Height="103" Margin="20,281,0,0" VerticalAlignment="Top" Width="398" CornerRadius="5" Background="#FF525CC9">
+                <Grid>
+                    <Ellipse HorizontalAlignment="Left" Height="87" Margin="19,7,0,0" VerticalAlignment="Top" Width="87">
+                        <Ellipse.Fill>
+                            <ImageBrush ImageSource="Resources/ProfileTemplate.png"/>
+                        </Ellipse.Fill>
+                    </Ellipse>
+                    <Label Content="Select Character" HorizontalAlignment="Left" Margin="159,17,0,0" VerticalAlignment="Top" Foreground="White" FontSize="20" FontFamily="Dubai" FontWeight="Bold"/>
+                    <Label Content="Perks go here" Margin="181,45,111,18" Foreground="White" FontSize="16" FontFamily="Dubai"/>
+                </Grid>
             </Border>
-            <Label Content="Pros about why you should login go here" HorizontalAlignment="Left" Margin="125,266,0,0" VerticalAlignment="Top" Foreground="White" FontSize="16" FontFamily="Dubai"/>
         </Grid>
-        <Image HorizontalAlignment="Left" Height="658" Margin="-198,-136,-130,-101" VerticalAlignment="Top" Width="1122" Source="Resources/Topo.png" RenderTransformOrigin="0.5,0.5" Panel.ZIndex="-2" Opacity="0.2" Grid.ColumnSpan="2" Visibility="Visible">
+
+        <Image x:Name="TopographyFilter" HorizontalAlignment="Left" Height="658" Margin="-92,-136,-116,-101" VerticalAlignment="Top" Width="1122" Source="Resources/Topo.png" RenderTransformOrigin="0.5,0.5" Panel.ZIndex="-2" Opacity="0.2" Visibility="Hidden">
             <Image.RenderTransform>
                 <TransformGroup>
                     <ScaleTransform/>
@@ -101,6 +262,24 @@
                 </TransformGroup>
             </Image.RenderTransform>
         </Image>
+        <Grid x:Name="SettingsFrame" HorizontalAlignment="Left" Height="421" Margin="63,0,0,0" VerticalAlignment="Top" Width="851" Opacity="1" Visibility="Visible" Panel.ZIndex="-1">
+            <Label Content="Settings" HorizontalAlignment="Left" Margin="20,10,0,0" VerticalAlignment="Top" Foreground="White" FontWeight="Bold" FontSize="24" FontFamily="Dubai"/>
+            <Ellipse HorizontalAlignment="Left" Height="65" Margin="20,288,0,0" VerticalAlignment="Top" Width="65">
+                <Ellipse.Fill>
+                    <ImageBrush ImageSource="Resources/Credit.png"/>
+                </Ellipse.Fill>
+            </Ellipse>
+            <Label Content="minokah" HorizontalAlignment="Left" Margin="96,289,0,0" VerticalAlignment="Top" Foreground="White" FontSize="20" FontFamily="Dubai" FontWeight="Bold"/>
+            <Label Content="Windows Xp (Malboro, Crystal)" Margin="96,315,540,68" Foreground="White" FontSize="16" FontFamily="Dubai"/>
+            <Label Content="Settings? What settings?" HorizontalAlignment="Left" Margin="20,115,0,0" VerticalAlignment="Top" Foreground="White" FontSize="16" FontFamily="Dubai"/>
+            <Border BorderThickness="1" HorizontalAlignment="Left" Height="32" Margin="96,353,0,0" VerticalAlignment="Top" Width="98" CornerRadius="5" Background="White">
+                <Grid x:Name="SettingsGitHub" HorizontalAlignment="Left" Height="32" Margin="-1" VerticalAlignment="Top" Width="98" MouseLeftButtonUp="SettingsGitHub_MouseLeftButtonUp" Cursor="Hand">
+                    <Image HorizontalAlignment="Left" Height="24" Margin="7,4,0,0" VerticalAlignment="Top" Width="24" Source="Resources/GitHub.png"/>
+                    <Label Content="GitHub" Margin="32,-1,7,-5" Foreground="Black" FontSize="16" FontFamily="Dubai" FontWeight="Bold"/>
+                </Grid>
+            </Border>
+            <Image HorizontalAlignment="Left" Height="450" Margin="287,-15,-11,-14" VerticalAlignment="Top" Width="575" Source="Resources/SettingsBlur.png" IsEnabled="False" Opacity="0.5"/>
+        </Grid>
 
     </Grid>
 </Window>

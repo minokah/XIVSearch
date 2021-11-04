@@ -63,6 +63,16 @@ namespace XIVSearch.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Credit {
+            get {
+                object obj = ResourceManager.GetObject("Credit", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap CSearch {
             get {
                 object obj = ResourceManager.GetObject("CSearch", resourceCulture);
@@ -102,6 +112,16 @@ namespace XIVSearch.Properties {
         internal static string data {
             get {
                 return ResourceManager.GetString("data", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap ErrorWhite {
+            get {
+                object obj = ResourceManager.GetObject("ErrorWhite", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
             }
         }
         
@@ -160,6 +180,16 @@ namespace XIVSearch.Properties {
         internal static System.Drawing.Bitmap Search {
             get {
                 object obj = ResourceManager.GetObject("Search", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap SettingsBlur {
+            get {
+                object obj = ResourceManager.GetObject("SettingsBlur", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
