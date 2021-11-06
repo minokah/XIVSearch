@@ -147,5 +147,11 @@
   <ItemGroup>
     <Resource Include="Resources\SettingsBlur.png" />
   </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\items.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Job_AllRounder.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

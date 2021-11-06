@@ -1,20 +1,12 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
-using System.Windows.Shapes;
 using System.Net.Http;
 using Newtonsoft.Json.Linq;
-using System.Windows.Threading;
 using System.Windows.Media.Animation;
 using System.Diagnostics;
 
@@ -42,6 +34,7 @@ namespace XIVSearch
                 g.Visibility = Visibility.Visible;
                 g.Opacity = 0;
                 g.IsEnabled = false;
+                Canvas.SetZIndex(g, -1);
             }
         }
         public MainWindow()
@@ -57,7 +50,7 @@ namespace XIVSearch
             MenuFrame.Opacity = 1;
             MenuFrame.IsEnabled = true;
 
-            SetupFrames(new Grid[] { CharacterFrame, CharSearchFrame, ItemSearchFrame, SettingsFrame});
+            SetupFrames(new Grid[] { CharacterFrame, CharSearchFrame, ItemFrame, ItemSearchFrame, SettingsFrame});
 
             TopographyFilter.Visibility = Visibility.Visible;
         }
@@ -70,11 +63,15 @@ namespace XIVSearch
                 CurrentActiveGrid.BeginAnimation(OpacityProperty, fadeFrameFrom);
                 CurrentActiveIcon.BeginAnimation(OpacityProperty, fadeSidebarIconFrom);
                 CurrentActiveGrid.Visibility = Visibility.Hidden;
+                CurrentActiveGrid.IsEnabled = false;
+                Canvas.SetZIndex(CurrentActiveGrid, -1);
+
+                To.BeginAnimation(OpacityProperty, fadeFrameTo);
                 To.Visibility = Visibility.Visible;
                 To.Opacity = 0;
-                To.BeginAnimation(OpacityProperty, fadeFrameTo);
-                CurrentActiveGrid.IsEnabled = false;
                 To.IsEnabled = true;
+                Canvas.SetZIndex(To, 0);
+
                 CurrentActiveGrid = To;
                 CurrentActiveIcon = Icon;
             }
@@ -90,11 +87,10 @@ namespace XIVSearch
         // Character Searching
         private void CharSearchFind_MouseLeftButtonUp(object sender, RoutedEventArgs e)
         {
-            CharSearchFrame.IsEnabled = false;
-
             try
             {
                 CharSearchResults.Items.Clear();
+                CSearchErrorFrame.Visibility = Visibility.Hidden;
 
                 HttpClient Client = new HttpClient();
                 string Result = Client.GetAsync("https://xivapi.com/character/search?name=" + CharSearchBox.Text).Result.Content.ReadAsStringAsync().Result;
@@ -126,11 +122,9 @@ namespace XIVSearch
                 CSearchErrorMessage.Content = error.Message;
                 CSearchErrorFrame.Visibility = Visibility.Visible;
             }
-
-            CharSearchFrame.IsEnabled = true;
         }
 
-        private void CharSearchEntryClick(object sender, SelectionChangedEventArgs e) {
+        private void CharSearchResults_SelectionChanged(object sender, SelectionChangedEventArgs e) {
 
             if (CharSearchResults.SelectedIndex > -1)
             {
@@ -144,13 +138,13 @@ namespace XIVSearch
             try
             {
                 HttpClient Client = new HttpClient();
-                //string Result = Client.GetAsync("https://xivapi.com/character/" + character + "?data=FC").Result.Content.ReadAsStringAsync().Result;
+                string Result = Client.GetAsync("https://xivapi.com/character/" + character + "?data=FC").Result.Content.ReadAsStringAsync().Result;
                 //Console.WriteLine(Result);
 
                 string sdata = Properties.Resources.data;
                 Data = JObject.Parse(sdata);
 
-                string Result = Properties.Resources.me;
+                //string Result = Properties.Resources.me;
                 JObject JSON = JObject.Parse(Result);
                 if ((string)JSON["Error"] != null) throw new Exception("The Lodestone is currently unavailable");
 
@@ -401,6 +395,121 @@ namespace XIVSearch
         private void SettingsGitHub_MouseLeftButtonUp(object sender, MouseButtonEventArgs e)
         {
             Process.Start("https://github.com/minokah/XIVSearch");
+        }
+
+        // Item Search
+        private void ItemSearchResults_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            if (ItemSearchResults.SelectedIndex > -1)
+            {
+                string name = ((string)((ListBoxItem)ItemSearchResults.SelectedItem).Content).Split('-')[0];
+                DisplayItem(name.Split(' ')[0]);
+            }
+        }
+
+        private void ItemSearchFind_MouseLeftButtonUp(object sender, MouseButtonEventArgs e)
+        {
+           try
+           {
+                ItemSearchResults.Items.Clear();
+                ItemSearchErrorFrame.Visibility = Visibility.Hidden;
+
+                HttpClient Client = new HttpClient();
+                String Result = Client.GetAsync("https://www.garlandtools.org/api/search.php?text=" + ItemSearchBox.Text + "&lang=en").Result.Content.ReadAsStringAsync().Result;
+                if (Result == "[]") throw new Exception("That item probably doesn't exist");
+                //Console.WriteLine(Result);
+
+                //string Result = Properties.Resources.items;
+                JToken Results = JToken.Parse(Result);
+
+                foreach (var item in Results)
+                {
+                    ListBoxItem entry = new ListBoxItem();
+                    entry.Width = Results.Count() > 13 ? 350 : 371;
+                    entry.Background = new SolidColorBrush(Color.FromRgb(44, 53, 112));
+                    entry.Foreground = new SolidColorBrush(Colors.White);
+                    entry.Cursor = Cursors.Hand;
+                    entry.Content = String.Format("{0} {1} - {2}", (string)item["id"], (string)item["type"], (string)item["obj"]["n"]);
+                    entry.FontFamily = new FontFamily("Dubai");
+                    entry.FontSize = 14;
+                    entry.HorizontalAlignment = HorizontalAlignment.Left;
+                    ItemSearchResults.Items.Add(entry);
+                }
+
+                ItemSearchResultsHeader.Visibility = Visibility.Visible;
+            }
+            catch (Exception error)
+            {
+                ItemSearchErrorMessage.Content = error.Message;
+                ItemSearchErrorFrame.Visibility = Visibility.Visible;
+            }
+        }
+
+        private void DisplayItem(string item)
+        {
+            try
+            {
+                HttpClient Client = new HttpClient();
+                string Result = Client.GetAsync("https://www.garlandtools.org/db/doc/item/en/3/" + item + ".json").Result.Content.ReadAsStringAsync().Result;
+
+                string sdata = Properties.Resources.data;
+                Data = JObject.Parse(sdata);
+
+                //string Result = Properties.Resources.me;
+                JObject JSON = JObject.Parse(Result);
+                JToken Item = JSON["item"];
+
+                // General
+                ItemName.Content = (string)Item["name"];
+                ItemLevel.Content = (string)Data["CategoryList"][(string)Item["category"]]["Name"] + " • Item Level " + (string)Item["ilvl"];
+                ItemIcon.Source = new BitmapImage(new Uri("https://garlandtools.org/files/icons/item/" + (string)Item["icon"] + ".png"));
+                if (Item["description"] != null) ItemDescription.Content = (string)Item["description"];
+                else ItemDescription.Content = "No description";
+
+                // General - Job
+                ItemJob.Content = (string)Item["jobCategories"];
+                ItemJobLevel.Content = "Lv. " + (string)Item["elvl"];
+                string[] Jobs = ((string)Item["jobCategories"]).Split(' ');
+                if (Jobs.Length > 1 || Jobs[0] == "All") ItemJobIcon.Source = new BitmapImage(new Uri("https://static.wikia.nocookie.net/finalfantasy/images/a/aa/Jobs_only_party_icon_from_Final_Fantasy_XIV.png"));
+                else ItemJobIcon.Source = new BitmapImage(new Uri((string)Data["JobIcons"][Jobs[0]]));
+
+                // Set gradient for banner based on rarity
+                LinearGradientBrush RarityGradient = new LinearGradientBrush();
+                RarityGradient.StartPoint = new Point(0, 0);
+                RarityGradient.EndPoint = new Point(0, 1);
+                switch ((string)Item["rarity"])
+                {
+                    case "1":
+                        RarityGradient.GradientStops.Add(new GradientStop(Color.FromRgb(79, 79, 79), 0));
+                        RarityGradient.GradientStops.Add(new GradientStop(Color.FromRgb(124, 124, 124), 0.3));
+                        break;
+                    case "2":
+                        RarityGradient.GradientStops.Add(new GradientStop(Color.FromRgb(27, 120, 52), 0));
+                        RarityGradient.GradientStops.Add(new GradientStop(Color.FromRgb(23, 189, 108), 0.3));
+                        break;
+                    case "3":
+                        RarityGradient.GradientStops.Add(new GradientStop(Color.FromRgb(25, 57, 124), 0));
+                        RarityGradient.GradientStops.Add(new GradientStop(Color.FromRgb(45, 122, 199), 0.3));
+                        break;
+                    case "4":
+                        RarityGradient.GradientStops.Add(new GradientStop(Color.FromRgb(117, 74, 147), 0));
+                        RarityGradient.GradientStops.Add(new GradientStop(Color.FromRgb(143, 93, 186), 0.3));
+                        break;
+                    case "5":
+                        RarityGradient.GradientStops.Add(new GradientStop(Color.FromRgb(188, 178, 218), 0));
+                        RarityGradient.GradientStops.Add(new GradientStop(Color.FromRgb(235, 135, 185), 0.3));
+                        break;
+                }
+                ItemBanner.Background = RarityGradient;
+
+                SwitchFrame(ItemFrame, SidebarSearch);
+            }
+            catch (Exception error)
+            {
+                Console.WriteLine(error.ToString());
+                ItemSearchErrorMessage.Content = error.Message;
+                ItemSearchErrorFrame.Visibility = Visibility.Visible;
+            }
         }
     }
 }

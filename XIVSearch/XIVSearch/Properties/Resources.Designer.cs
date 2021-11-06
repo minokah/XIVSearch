@@ -136,6 +136,25 @@ namespace XIVSearch.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to [{&quot;type&quot;:&quot;npc&quot;,&quot;id&quot;:&quot;1005665&quot;,&quot;obj&quot;:{&quot;i&quot;:1005665,&quot;n&quot;:&quot;Chocobo&quot;,&quot;l&quot;:54}},{&quot;type&quot;:&quot;npc&quot;,&quot;id&quot;:&quot;1006001&quot;,&quot;obj&quot;:{&quot;i&quot;:1006001,&quot;n&quot;:&quot;Chocobo&quot;,&quot;l&quot;:52,&quot;q&quot;:1}},{&quot;type&quot;:&quot;action&quot;,&quot;id&quot;:&quot;10401&quot;,&quot;obj&quot;:{&quot;i&quot;:10401,&quot;n&quot;:&quot;Chocobo Brush&quot;,&quot;c&quot;:61260,&quot;j&quot;:0,&quot;t&quot;:4,&quot;l&quot;:0}},{&quot;type&quot;:&quot;item&quot;,&quot;id&quot;:&quot;9784&quot;,&quot;obj&quot;:{&quot;i&quot;:9784,&quot;n&quot;:&quot;Chocobo Card&quot;,&quot;l&quot;:1,&quot;c&quot;:27662,&quot;t&quot;:86,&quot;g&quot;:14,&quot;r&quot;:1}},{&quot;type&quot;:&quot;item&quot;,&quot;id&quot;:&quot;30859&quot;,&quot;obj&quot;:{&quot;i&quot;:30859,&quot;n&quot;:&quot;Chocobo Carriage Whistle&quot;,&quot;l&quot;:1,&quot;c&quot;:26012,&quot;t&quot;:63,&quot;g&quot;:17,&quot;r&q....
+        /// </summary>
+        internal static string items {
+            get {
+                return ResourceManager.GetString("items", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Job_AllRounder {
+            get {
+                object obj = ResourceManager.GetObject("Job_AllRounder", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
         internal static System.Drawing.Bitmap Logo {

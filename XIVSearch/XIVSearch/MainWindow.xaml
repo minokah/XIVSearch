@@ -183,7 +183,7 @@
                 </Grid>
             </Grid>
         </Grid>
-        <Grid x:Name="ItemSearchFrame" HorizontalAlignment="Left" Height="421" Margin="63,0,0,0" VerticalAlignment="Top" Width="851" Visibility="Hidden" IsEnabled="False" Opacity="1">
+        <Grid x:Name="ItemSearchFrame" HorizontalAlignment="Left" Height="421" Margin="63,0,0,0" VerticalAlignment="Top" Width="851" Visibility="Hidden" IsEnabled="False" Opacity="1" Panel.ZIndex="-1">
             <Label Content="Item Search" HorizontalAlignment="Left" Margin="21,10,0,0" VerticalAlignment="Top" Foreground="White" FontWeight="Bold" FontSize="24" FontFamily="Dubai"/>
             <TextBox x:Name="ItemSearchBox" HorizontalAlignment="Left" Height="35" Margin="21,82,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="295" FontFamily="Dubai" FontSize="21" Background="#FF3E3E3E" BorderBrush="{x:Null}" Foreground="White" SelectionBrush="#FF811B1B"/>
             <Label Content="Enter an item name to find out more" HorizontalAlignment="Left" Margin="21,45,0,0" VerticalAlignment="Top" Foreground="White" FontSize="16" FontFamily="Dubai"/>
@@ -191,10 +191,10 @@
                 <Label x:Name="ItemSearchErrorMessage" Content="Error Message" HorizontalAlignment="Left" Margin="37,3,0,0" VerticalAlignment="Top" FontFamily="Dubai" FontSize="14" RenderTransformOrigin="0.495,-0.324" Foreground="White" Height="30"/>
                 <Image HorizontalAlignment="Left" Height="40" VerticalAlignment="Top" Width="40" Source="Resources/ErrorWhite.png" Margin="2,-1,0,0"/>
             </Grid>
-            <Border x:Name="ItemSearchFind" BorderBrush="Black" BorderThickness="1" HorizontalAlignment="Left" Height="30" Margin="21,122,0,0" VerticalAlignment="Top" Width="295" CornerRadius="5" Background="#FF3993E4" Cursor="Hand" MouseLeftButtonUp="CharSearchFind_MouseLeftButtonUp">
+            <Border x:Name="ItemSearchFind" BorderBrush="Black" BorderThickness="1" HorizontalAlignment="Left" Height="30" Margin="21,122,0,0" VerticalAlignment="Top" Width="295" CornerRadius="5" Background="#FF3993E4" Cursor="Hand" MouseLeftButtonUp="ItemSearchFind_MouseLeftButtonUp">
                 <Label Content="Search" Margin="-1" Foreground="White" Height="30" FontFamily="Dubai" FontSize="15" HorizontalContentAlignment="Center"/>
             </Border>
-            <ListBox x:Name="ItemSearchResults" HorizontalAlignment="Left" Height="366" Margin="466,45,0,0" VerticalAlignment="Top" Width="375" BorderBrush="{x:Null}" SelectionChanged="CharSearchEntryClick" Foreground="{x:Null}" Background="{x:Null}"/>
+            <ListBox x:Name="ItemSearchResults" HorizontalAlignment="Left" Height="366" Margin="466,45,0,0" VerticalAlignment="Top" Width="375" BorderBrush="{x:Null}" SelectionChanged="ItemSearchResults_SelectionChanged" Foreground="{x:Null}" Background="{x:Null}"/>
             <Grid x:Name="ItemSearchResultsHeader" HorizontalAlignment="Left" Height="45" Margin="456,0,0,0" VerticalAlignment="Top" Width="385" Visibility="Hidden">
                 <Grid.Background>
                     <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
@@ -213,7 +213,7 @@
                 </ComboBox>
             </Grid>
         </Grid>
-        <Grid x:Name="CharSearchFrame" HorizontalAlignment="Left" Height="421" Margin="63,0,0,0" VerticalAlignment="Top" Width="851" Visibility="Hidden" IsEnabled="False" Opacity="1">
+        <Grid x:Name="CharSearchFrame" HorizontalAlignment="Left" Height="421" Margin="63,0,0,0" VerticalAlignment="Top" Width="851" Visibility="Hidden" IsEnabled="False" Opacity="1" Panel.ZIndex="-1">
             <Label Content="Character Lookup" HorizontalAlignment="Left" Margin="21,10,0,0" VerticalAlignment="Top" Foreground="White" FontWeight="Bold" FontSize="24" FontFamily="Dubai"/>
             <TextBox x:Name="CharSearchBox" HorizontalAlignment="Left" Height="35" Margin="21,82,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="295" FontFamily="Dubai" FontSize="21" Background="#FF3E3E3E" BorderBrush="{x:Null}" Foreground="White" SelectionBrush="#FF811B1B"/>
             <Label Content="Enter a character's name to find them" HorizontalAlignment="Left" Margin="21,45,0,0" VerticalAlignment="Top" Foreground="White" FontSize="16" FontFamily="Dubai"/>
@@ -224,7 +224,7 @@
             <Border x:Name="CharSearchFind" BorderBrush="Black" BorderThickness="1" HorizontalAlignment="Left" Height="30" Margin="21,122,0,0" VerticalAlignment="Top" Width="295" CornerRadius="5" Background="#FF3993E4" Cursor="Hand" MouseLeftButtonUp="CharSearchFind_MouseLeftButtonUp">
                 <Label Content="Search" Margin="-1" Foreground="White" Height="30" FontFamily="Dubai" FontSize="15" HorizontalContentAlignment="Center"/>
             </Border>
-            <ListBox x:Name="CharSearchResults" HorizontalAlignment="Left" Height="366" Margin="466,45,0,0" VerticalAlignment="Top" Width="375" BorderBrush="{x:Null}" SelectionChanged="CharSearchEntryClick" Foreground="{x:Null}" Background="{x:Null}"/>
+            <ListBox x:Name="CharSearchResults" HorizontalAlignment="Left" Height="366" Margin="466,45,0,0" VerticalAlignment="Top" Width="375" BorderBrush="{x:Null}" SelectionChanged="CharSearchResults_SelectionChanged" Foreground="{x:Null}" Background="{x:Null}"/>
             <Grid x:Name="CharSearchResultsHeader" HorizontalAlignment="Left" Height="45" Margin="456,0,0,0" VerticalAlignment="Top" Width="385" Visibility="Hidden">
                 <Grid.Background>
                     <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
@@ -235,7 +235,7 @@
                 <Label Content="Results" HorizontalAlignment="Left" Margin="10,6,0,0" VerticalAlignment="Top" Foreground="White" FontFamily="Dubai" FontSize="18" FontWeight="Bold"/>
             </Grid>
         </Grid>
-        <Grid x:Name="MenuFrame" HorizontalAlignment="Left" Height="421" Margin="63,0,0,0" VerticalAlignment="Top" Width="851" Opacity="1" Visibility="Hidden" Panel.ZIndex="-1">
+        <Grid x:Name="MenuFrame" HorizontalAlignment="Left" Height="421" Margin="63,0,0,0" VerticalAlignment="Top" Width="851" Opacity="1" Visibility="Hidden" Panel.ZIndex="0">
             <Label Content="Final Fantasy XIV Search Tool" HorizontalAlignment="Left" Margin="21,10,0,0" VerticalAlignment="Top" Foreground="White" FontWeight="Bold" FontSize="24" FontFamily="Dubai"/>
             <Label Content="Search for things from the critically acclaimed MMORPG" HorizontalAlignment="Left" Margin="21,45,0,0" VerticalAlignment="Top" Foreground="White" FontSize="16" FontFamily="Dubai"/>
             <Image HorizontalAlignment="Left" Height="622" Margin="500,-27,-271,-174" VerticalAlignment="Top" Width="622" Source="Resources/Moogle.png" IsEnabled="False"/>
@@ -262,7 +262,7 @@
                 </TransformGroup>
             </Image.RenderTransform>
         </Image>
-        <Grid x:Name="SettingsFrame" HorizontalAlignment="Left" Height="421" Margin="63,0,0,0" VerticalAlignment="Top" Width="851" Opacity="1" Visibility="Visible" Panel.ZIndex="-1">
+        <Grid x:Name="SettingsFrame" HorizontalAlignment="Left" Height="421" Margin="63,0,0,0" VerticalAlignment="Top" Width="851" Opacity="1" Visibility="Hidden" Panel.ZIndex="-1">
             <Label Content="Settings" HorizontalAlignment="Left" Margin="20,10,0,0" VerticalAlignment="Top" Foreground="White" FontWeight="Bold" FontSize="24" FontFamily="Dubai"/>
             <Ellipse HorizontalAlignment="Left" Height="65" Margin="20,288,0,0" VerticalAlignment="Top" Width="65">
                 <Ellipse.Fill>
@@ -279,6 +279,23 @@
                 </Grid>
             </Border>
             <Image HorizontalAlignment="Left" Height="450" Margin="287,-15,-11,-14" VerticalAlignment="Top" Width="575" Source="Resources/SettingsBlur.png" IsEnabled="False" Opacity="0.5"/>
+        </Grid>
+        <Grid x:Name="ItemFrame" HorizontalAlignment="Left" Height="419" Margin="63,0,0,0" VerticalAlignment="Top" Width="851" Opacity="1" Visibility="Visible">
+            <Grid x:Name="ItemBanner" HorizontalAlignment="Left" Height="88" VerticalAlignment="Top" Width="851">
+                <Grid.Background>
+                    <LinearGradientBrush EndPoint="0.5,1" MappingMode="RelativeToBoundingBox" StartPoint="0.5,0">
+                        <GradientStop Color="#FFEA87B9" Offset="0.3"/>
+                        <GradientStop Color="#FFBCB2DA"/>
+                    </LinearGradientBrush>
+                </Grid.Background>
+                <Label x:Name="ItemName" Content="Item Name" HorizontalAlignment="Left" Margin="112,6,0,0" VerticalAlignment="Top" Foreground="White" FontSize="28" FontWeight="Bold" FontFamily="Dubai"/>
+                <Label x:Name="ItemJob" Content="Job" HorizontalAlignment="Right" Margin="0,10,23,0" VerticalAlignment="Top" Foreground="#FFFFC500" FontSize="24" FontWeight="Bold" FontFamily="Dubai"/>
+                <Label x:Name="ItemJobLevel" Content="Lv. 99" HorizontalAlignment="Right" Margin="0,43,23,0" VerticalAlignment="Top" Foreground="White" FontSize="16" FontWeight="Bold" FontFamily="Dubai"/>
+                <Label x:Name="ItemLevel" Content="Item Level 999" HorizontalAlignment="Left" Margin="112,43,0,0" VerticalAlignment="Top" Foreground="#FFE2E2E2" FontSize="16" FontFamily="Dubai"/>
+                <Image x:Name="ItemJobIcon" HorizontalAlignment="Left" Height="28" Margin="750,47,0,0" VerticalAlignment="Top" Width="27" Source="https://img.finalfantasyxiv.com/lds/h/E/d0Tx-vhnsMYfYpGe9MvslemEfg.png"/>
+                <Image x:Name="ItemIcon" HorizontalAlignment="Left" Height="70" Margin="20,8,0,0" VerticalAlignment="Top" Width="70"/>
+            </Grid>
+            <Label x:Name="ItemDescription" Content="Description" HorizontalAlignment="Left" Margin="20,110,0,0" VerticalAlignment="Top" Foreground="#FFE2E2E2" FontSize="16" FontFamily="Dubai"/>
         </Grid>
 
     </Grid>
