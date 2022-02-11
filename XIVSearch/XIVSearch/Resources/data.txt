@@ -536,23 +536,68 @@
     "16": "Veena"
   },
   "CharacterGuardian": {
-    "1": "https://ffxiv.gamerescape.com/w/images/thumb/e/e8/Halone_Icon.png/35px-Halone_Icon.png",
-    "2": "https://ffxiv.gamerescape.com/w/images/thumb/6/69/Menphina_Icon.png/35px-Menphina_Icon.png",
-    "3": "https://ffxiv.gamerescape.com/w/images/thumb/7/7f/Thaliak_Icon.png/35px-Thaliak_Icon.png",
-    "4": "https://ffxiv.gamerescape.com/w/images/thumb/f/fc/Nymeia_Icon.png/35px-Nymeia_Icon.png",
-    "5": "https://ffxiv.gamerescape.com/w/images/thumb/3/3c/Llymlaen_Icon.png/35px-Llymlaen_Icon.png",
-    "6": "https://ffxiv.gamerescape.com/w/images/thumb/9/96/Oschon_Icon.png/35px-Oschon_Icon.png",
-    "7": "https://ffxiv.gamerescape.com/w/images/thumb/9/9f/Azeyma_Icon.png/35px-Azeyma_Icon.png",
-    "8": "https://ffxiv.gamerescape.com/w/images/thumb/7/70/Rhalgr_Icon.png/35px-Rhalgr_Icon.png",
-    "9": "https://ffxiv.gamerescape.com/w/images/thumb/9/9f/Azeyma_Icon.png/35px-Azeyma_Icon.png",
-    "10": "https://ffxiv.gamerescape.com/w/images/thumb/9/99/Nald%27thal_Icon.png/35px-Nald%27thal_Icon.png",
-    "11": "https://ffxiv.gamerescape.com/w/images/thumb/a/ac/Nophica_Icon.png/35px-Nophica_Icon.png",
-    "12": "https://ffxiv.gamerescape.com/w/images/thumb/2/22/Althyk_Icon.png/35px-Althyk_Icon.png"
+    "1": {
+        "Name": "Halone, the Fury",
+        "Icon": "https://ffxiv.gamerescape.com/w/images/thumb/e/e8/Halone_Icon.png/35px-Halone_Icon.png"
+    },
+    "2": {
+        "Name": "Menphina, the Lover",
+        "Icon": "https://ffxiv.gamerescape.com/w/images/thumb/6/69/Menphina_Icon.png/35px-Menphina_Icon.png"
+    },
+    "3": {
+        "Name": "Thaliak, the Scholar",
+        "Icon": "https://ffxiv.gamerescape.com/w/images/thumb/7/7f/Thaliak_Icon.png/35px-Thaliak_Icon.png"
+    },
+    "4": {
+        "Name": "Nymeia, the Spinner",
+        "Icon": "https://ffxiv.gamerescape.com/w/images/thumb/f/fc/Nymeia_Icon.png/35px-Nymeia_Icon.png"
+    },
+    "5": {
+        "Name": "Llymlaen, the Navigator",
+        "Icon": "https://ffxiv.gamerescape.com/w/images/thumb/3/3c/Llymlaen_Icon.png/35px-Llymlaen_Icon.png"
+    },
+    "6": {
+        "Name": "Oschon, the Wanderer",
+        "Icon": "https://ffxiv.gamerescape.com/w/images/thumb/9/96/Oschon_Icon.png/35px-Oschon_Icon.png"
+    },
+    "7": {
+        "Name": "Byregot, the Builder",
+        "Icon": "https://ffxiv.gamerescape.com/w/images/thumb/0/03/Byregot_Icon.png/35px-Byregot_Icon.png"
+    },
+    "8": {
+        "Name": "Rhalgr, the Destroyer",
+        "Icon": "https://ffxiv.gamerescape.com/w/images/thumb/7/70/Rhalgr_Icon.png/35px-Rhalgr_Icon.png"
+    },
+    "9": {
+        "Name": "Azeyma, the Warden",
+        "Icon": "https://ffxiv.gamerescape.com/w/images/thumb/9/9f/Azeyma_Icon.png/35px-Azeyma_Icon.png"
+    },
+    "10": {
+        "Name": "Nald'thal, the Trader",
+        "Icon": "https://ffxiv.gamerescape.com/w/images/thumb/9/99/Nald%27thal_Icon.png/35px-Nald%27thal_Icon.png"
+    },
+    "11": {
+        "Name": "Nophica, the Matron",
+        "Icon": "https://ffxiv.gamerescape.com/w/images/thumb/a/ac/Nophica_Icon.png/35px-Nophica_Icon.png"
+    },
+    "12": {
+        "Name": "Althyk, the Keeper",
+        "Icon": "https://ffxiv.gamerescape.com/w/images/thumb/2/22/Althyk_Icon.png/35px-Althyk_Icon.png"
+    }
   },
   "CharacterTown": {
-    "1": "https://img.finalfantasyxiv.com/lds/h/j/Xlz3DzGOKmwiDGho5aGWaudRNI.png",
-    "2": "https://img.finalfantasyxiv.com/lds/h/u/ZHuDKgNULSbEA_VTXdjeA9MlEs.png",
-    "3": "https://img.finalfantasyxiv.com/lds/h/u/qXfC-BmEzWbXW3sn62HMNnD3kU.png"
+    "1": {
+        "Name": "Limsa Lominsa",
+        "Icon": "https://img.finalfantasyxiv.com/lds/h/j/Xlz3DzGOKmwiDGho5aGWaudRNI.png"
+    },
+    "2": {
+        "Name": "Gridania",
+        "Icon": "https://img.finalfantasyxiv.com/lds/h/u/ZHuDKgNULSbEA_VTXdjeA9MlEs.png"
+    },
+    "3": {
+        "Name": "Ul-dah",
+        "Icon": "https://img.finalfantasyxiv.com/lds/h/u/qXfC-BmEzWbXW3sn62HMNnD3kU.png"
+    }
   },
   "GrandCompanies": {
     "1": {

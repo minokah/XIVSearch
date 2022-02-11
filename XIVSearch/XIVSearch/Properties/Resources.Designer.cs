@@ -63,9 +63,9 @@ namespace XIVSearch.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap Credit {
+        internal static System.Drawing.Bitmap CharSearch {
             get {
-                object obj = ResourceManager.GetObject("Credit", resourceCulture);
+                object obj = ResourceManager.GetObject("CharSearch", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -73,9 +73,9 @@ namespace XIVSearch.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap CSearch {
+        internal static System.Drawing.Bitmap Credit {
             get {
-                object obj = ResourceManager.GetObject("CSearch", resourceCulture);
+                object obj = ResourceManager.GetObject("Credit", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

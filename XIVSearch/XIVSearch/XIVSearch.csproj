@@ -103,9 +103,6 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="Resources\CSearch.png" />
-  </ItemGroup>
-  <ItemGroup>
     <Resource Include="Resources\data.txt" />
   </ItemGroup>
   <ItemGroup>
@@ -152,6 +149,12 @@
   </ItemGroup>
   <ItemGroup>
     <Resource Include="Resources\Job_AllRounder.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\CharSearch.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\PLD.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
